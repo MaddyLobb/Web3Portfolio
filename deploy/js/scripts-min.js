@@ -1,1 +1,0 @@
-!function(a,t){"use strict";a.gsap.registerPlugin(t.DrawSVGPlugin);const r=a.gsap.timeline();r.to("#pathOne",{duration:2,drawSVG:"0%"}),r.from("#text",{duration:3,alpha:0},">-1"),r.from("#header",{duration:.5,alpha:0},">-2")}(gsap,DrawSVGPlugin);

@@ -410,21 +410,22 @@ textarea {
     Navigation
 ============= */
 nav {
-  height: 100%;
+  height: 50px;
+  width: 100%;
 }
 nav ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
 nav ul li {
-  margin-left: 2vw;
+  margin-left: 5vw;
 }
 nav ul li a:link, nav ul li a:visited {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  color: #737144;
+  color: #fff;
   font-weight: 900;
 }
 @media (min-width: 768px) {
@@ -439,33 +440,49 @@ nav ul li a:link, nav ul li a:visited {
 header {
   position: fixed;
   width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-}
-header > div {
-  display: grid;
-  grid-template-columns: 30% auto;
-  padding: 8px 16px;
-}
-header > div aside a:link, header > div aside a:visited {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.125rem;
-  color: #624B3E;
-  font-weight: 900;
-}
-@media (min-width: 768px) {
-  header > div aside a:link, header > div aside a:visited {
-    font-size: 25px;
-  }
-}
-header > div aside a {
-  display: inline-block;
+  height: 100%;
+  z-index: 10;
 }
 
 /* =============
     Footer
 ============= */
 #hero {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero h1 {
+  color: white;
+}
+
+#contact {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+#contact form {
+  max-width: 400px;
+}
+#contact form input, #contact form textarea {
+  border: 0px;
+  outline: 0px;
+  border-radius: 50px;
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+}
+#contact #first-name {
+  width: 35%;
+}
+#contact #last-name {
+  width: 35%;
+  margin-right: 5%;
 }

@@ -1,0 +1,34 @@
+#contact{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    form {
+        max-width: 400px;
+
+        input, textarea{
+            border:0px; 
+            outline:0px;
+            border-radius: 50px;
+            margin-top: 1em;
+            padding: 1em;
+            //display: block;
+            width: 100%;
+            //height: 100%;
+
+        }
+    }
+
+    #first-name{
+        width: 35%;
+    }
+
+    #last-name{
+        width: 35%;
+        margin-right: 5%;
+    }
+
+}
