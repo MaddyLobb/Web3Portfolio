@@ -1,0 +1,26 @@
+#about{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+    #about-svg{
+        width: 30%;
+        height: 30%;
+        margin-left: 60%;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    p{
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: rem-calc(16);
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+
+        // margin-left: 5%;
+        // margin-right: 5%;
+    }
+}
