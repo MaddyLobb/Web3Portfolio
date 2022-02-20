@@ -1,0 +1,39 @@
+#branding{ 
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    @include md{ 
+
+    }
+
+    div{
+        background-color: white;
+        height: 50%;
+        padding: 1em;
+        font-family: 'Open Sans', sans-serif;
+        
+        @include md{
+            height: 100%;
+            width: 50%;
+        }
+
+        h1{
+        font-weight: 800;
+        font-size: rem-calc(26);
+        }
+
+        h3{
+            font-weight: 800;
+            font-size: rem-calc(20);
+            }
+
+        p{
+            font-weight: 400;
+            font-size: rem-calc(16); 
+        }
+    }
+}

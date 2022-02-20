@@ -372,10 +372,6 @@ a {
 /* =============
     Typography
 ============= */
-@font-face {
-  font-family: "Sonder-Medium";
-  src: url(Fonts/Sonder-Medium.otf);
-}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -460,7 +456,6 @@ header {
 }
 #hero h1 {
   color: white;
-  font-family: "Sonder-Medium";
   font-size: 6.25rem;
   text-align: center;
 }
@@ -500,6 +495,101 @@ header {
   }
 }
 
+#about {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+@media (min-width: 768px) {
+  #about {
+    position: relative;
+  }
+}
+#about #about-svg {
+  width: 30%;
+  height: 30%;
+  margin-left: 60%;
+  padding-top: 20%;
+}
+@media (min-width: 768px) {
+  #about #about-svg {
+    width: 25%;
+    height: 25%;
+    margin-left: 65%;
+    padding-top: 15%;
+    position: absolute;
+  }
+}
+@media (min-width: 1024px) {
+  #about #about-svg {
+    width: 20%;
+    height: 20%;
+    margin-left: 70%;
+    padding-top: 10%;
+  }
+}
+#about #about-text {
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+@media (min-width: 768px) {
+  #about #about-text {
+    width: 45%;
+    padding-top: 15%;
+    max-width: 375px;
+  }
+}
+@media (min-width: 1024px) {
+  #about #about-text {
+    padding-top: 10%;
+    max-width: 350px;
+  }
+}
+#about #about-text p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1em;
+  background-color: black;
+}
+
+#branding {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#branding div {
+  background-color: white;
+  height: 50%;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 768px) {
+  #branding div {
+    height: 100%;
+    width: 50%;
+  }
+}
+#branding div h1 {
+  font-weight: 800;
+  font-size: 1.625rem;
+}
+#branding div h3 {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+#branding div p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 #contact {
   height: 100vh;
   width: 100vw;
@@ -526,26 +616,4 @@ header {
 }
 #contact #last-name {
   width: 45%;
-}
-
-#about {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-}
-#about #about-svg {
-  width: 30%;
-  height: 30%;
-  margin-left: 60%;
-  padding-top: 20%;
-  padding-bottom: 20%;
-}
-#about p {
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 16px auto 16px;
 }
