@@ -372,6 +372,10 @@ a {
 /* =============
     Typography
 ============= */
+@font-face {
+  font-family: "Sonder-Medium";
+  src: url(..Fonts/Sonder-Medium.woff) format("woff");
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -456,6 +460,7 @@ header {
 }
 #hero h1 {
   color: white;
+  font-family: "Sonder-Medium", serif;
   font-size: 6.25rem;
   text-align: center;
 }
@@ -573,7 +578,6 @@ header {
 }
 @media (min-width: 768px) {
   #branding div {
-    height: 100%;
     width: 50%;
   }
 }
