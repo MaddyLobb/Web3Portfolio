@@ -563,9 +563,55 @@ header {
   background-color: black;
 }
 
-#branding {
+#photography {
+  background-color: black;
+  height: 100vh;
   width: 100vw;
-  background-color: white;
+}
+#photography #photo1-photography-image {
+  display: inline-block;
+  width: 100%;
+  padding-top: 10%;
+}
+@media (min-width: 768px) {
+  #photography #photo1-photography-image {
+    float: right;
+    width: 40%;
+    padding-right: 10%;
+  }
+}
+#photography #photo1-photography-image img {
+  width: 100%;
+}
+#photography #photography-projects-text {
+  display: inline-block;
+  width: 90%;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+@media (min-width: 768px) {
+  #photography #photography-projects-text {
+    float: left;
+    width: 35%;
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+}
+#photography #photography-projects-text h1 {
+  font-weight: 800;
+  font-size: 1.625rem;
+  color: white;
+}
+#photography #photography-projects-text p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  padding-bottom: 5%;
+}
+
+#branding {
+  height: 100vh;
+  width: 100vw;
 }
 #branding #STJCH-branding-left {
   display: inline-block;
