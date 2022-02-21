@@ -89,6 +89,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/Photo1.jpg" : {
+      "ft" : 16384,
+      "iS" : 90484,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/Photo1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/sjbcard.jpg" : {
       "ft" : 16384,
       "iS" : 368359,
@@ -177,6 +190,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/hero.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/photography.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/photography.html",
       "oF" : 0
     },
     "\/dev\/content\/projects.kit" : {
