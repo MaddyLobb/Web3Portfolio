@@ -565,31 +565,41 @@ header {
 #branding {
   height: 100vh;
   width: 100vw;
-  background-color: black;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-#branding div {
-  background-color: white;
-  height: 50%;
-  padding: 1em;
-  font-family: "Open Sans", sans-serif;
+  background-color: gray;
 }
 @media (min-width: 768px) {
-  #branding div {
+  #branding {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+#branding img {
+  width: 100%;
+  height: 100%;
+}
+#branding #STJCH-branding-left {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  height: 50%;
+  padding: 1em;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+@media (min-width: 768px) {
+  #branding #STJCH-branding-left {
     width: 50%;
   }
 }
-#branding div h1 {
+#branding #STJCH-branding-left h1 {
   font-weight: 800;
   font-size: 1.625rem;
 }
-#branding div h3 {
+#branding #STJCH-branding-left h3 {
   font-weight: 800;
   font-size: 1.25rem;
 }
-#branding div p {
+#branding #STJCH-branding-left p {
   font-weight: 400;
   font-size: 1rem;
 }

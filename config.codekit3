@@ -21,22 +21,106 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/header\/Logo.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/deploy\/img\/header\/Logo.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
+    "\/deploy\/Fonts\/Sonder-Medium.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/Fonts\/Sonder-Medium.otf",
+      "oF" : 0
     },
-    "\/deploy\/img\/hero\/hero.jpg" : {
+    "\/deploy\/Fonts\/Sonder-Medium.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/Fonts\/Sonder-Medium.woff",
+      "oF" : 0
+    },
+    "\/deploy\/img\/Bembo.jpg" : {
       "ft" : 16384,
-      "iS" : 445983,
+      "iS" : 158793,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/hero\/hero.jpg",
+      "oAP" : "\/deploy\/img\/Bembo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/Inspirecover.jpg" : {
+      "ft" : 16384,
+      "iS" : 189393,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/Inspirecover.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/inspirelast.jpg" : {
+      "ft" : 16384,
+      "iS" : 238964,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/inspirelast.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/Inspirespread.jpg" : {
+      "ft" : 16384,
+      "iS" : 425318,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/Inspirespread.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/sjbcard.jpg" : {
+      "ft" : 16384,
+      "iS" : 368359,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/sjbcard.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/sjletter.jpg" : {
+      "ft" : 16384,
+      "iS" : 423131,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/sjletter.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/Sjlogo.jpg" : {
+      "ft" : 16384,
+      "iS" : 78197,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/Sjlogo.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -370,22 +454,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/Fonts\/Sonder-Medium.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/Fonts\/Sonder-Medium.otf",
-      "oF" : 0
-    },
-    "\/Fonts\/Sonder-Medium.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/Fonts\/Sonder-Medium.woff",
-      "oF" : 0
     },
     "\/images\/Bembo.jpg" : {
       "ft" : 16384,
