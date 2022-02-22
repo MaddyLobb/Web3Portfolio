@@ -416,6 +416,7 @@ textarea {
 nav {
   height: 50px;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 nav ul {
   display: flex;
@@ -505,56 +506,69 @@ header {
   height: 100vh;
   width: 100vw;
   background-color: black;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-areas: ". about .";
 }
 @media (min-width: 768px) {
   #about {
     position: relative;
   }
 }
-#about #about-svg {
-  width: 30%;
-  height: 30%;
-  margin-left: 60%;
-  padding-top: 20%;
+#about #about-container {
+  grid-area: about;
+}
+#about #about-container #about-svg-container {
+  display: grid;
+  grid-template-columns: 50% auto 5%;
+  grid-template-areas: ". about-svg .";
+  padding-top: 15%;
+  position: relative;
 }
 @media (min-width: 768px) {
-  #about #about-svg {
-    width: 25%;
-    height: 25%;
-    margin-left: 65%;
-    padding-top: 15%;
-    position: absolute;
+  #about #about-container #about-svg-container {
+    padding-top: 10%;
+    grid-template-columns: 60% auto 5%;
   }
 }
 @media (min-width: 1024px) {
-  #about #about-svg {
-    width: 20%;
-    height: 20%;
-    margin-left: 70%;
-    padding-top: 10%;
+  #about #about-container #about-svg-container {
+    padding-top: 5%;
+    grid-template-columns: 65% auto 5%;
   }
 }
-#about #about-text {
-  height: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+#about #about-container #about-svg-container #about-svg {
+  grid-area: about-svg;
+  position: absolute;
+}
+#about #about-text-container {
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-areas: ". about-text .";
+  padding-top: 65%;
 }
 @media (min-width: 768px) {
-  #about #about-text {
-    width: 45%;
-    padding-top: 15%;
-    max-width: 375px;
+  #about #about-text-container {
+    padding-top: 30%;
+    grid-template-columns: 5% auto 40%;
   }
 }
 @media (min-width: 1024px) {
-  #about #about-text {
-    padding-top: 10%;
-    max-width: 350px;
+  #about #about-text-container {
+    padding-top: 5%;
+    grid-template-columns: 10% auto 55%;
   }
 }
-#about #about-text p {
+@media (min-width: 1440px) {
+  #about #about-text-container {
+    padding-top: 5%;
+    grid-template-columns: 10% auto 60%;
+  }
+}
+#about #about-text-container #about-text {
+  grid-area: about-text;
+}
+#about #about-text-container #about-text p {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -665,16 +679,69 @@ header {
 #contact {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
-  color: white;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-areas: ". contact .";
 }
-#contact form {
+#contact #contact-whole {
+  grid-area: contact;
+}
+#contact #contact-whole #contact-svg-container {
+  display: grid;
+  grid-template-columns: 50% auto 5%;
+  grid-template-areas: ". contact-svg .";
+  padding-top: 15%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #contact #contact-whole #contact-svg-container {
+    padding-top: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #contact #contact-whole #contact-svg-container {
+    padding-top: 5%;
+  }
+}
+#contact #contact-whole #contact-svg-container #contact-svg {
+  grid-area: contact-svg;
+  position: absolute;
+}
+#contact #contact-whole #contact-form-container {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-template-areas: ". contact-form .";
+  padding-top: 50%;
+}
+@media (min-width: 768px) {
+  #contact #contact-whole #contact-form-container {
+    padding-top: 35%;
+  }
+}
+@media (min-width: 1024px) {
+  #contact #contact-whole #contact-form-container {
+    padding-top: 25%;
+    grid-template-columns: 10% auto 5%;
+  }
+}
+#contact #contact-whole #contact-form-container #contact-form {
+  grid-area: contact-form;
   max-width: 400px;
 }
-#contact form input, #contact form textarea {
+#contact #contact-whole #contact-form-container #contact-form h1 {
+  font-family: "Sonder-Medium", serif;
+  font-size: 1.625rem;
+  text-align: center;
+  color: white;
+}
+#contact #contact-whole #contact-form-container #contact-form h2 {
+  font-family: "Sonder-Medium", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+}
+#contact #contact-whole #contact-form-container #contact-form form input, #contact #contact-whole #contact-form-container #contact-form form textarea {
   border: 0px;
   outline: 0px;
   border-radius: 10px;
@@ -683,9 +750,21 @@ header {
   width: 100%;
   height: 100%;
 }
-#contact #first-name {
-  width: 45%;
+#contact #contact-whole #contact-form-container #contact-form form #first-name {
+  width: 40%;
+  color: black;
 }
-#contact #last-name {
-  width: 45%;
+#contact #contact-whole #contact-form-container #contact-form form #last-name {
+  width: 40%;
+  float: right;
+}
+#contact #contact-whole #contact-form-container #contact-form form #email {
+  width: 92%;
+}
+#contact #contact-whole #contact-form-container #contact-form form #message {
+  width: 92%;
+}
+#contact #contact-whole #contact-form-container #contact-form form #submit {
+  background: white;
+  color: black;
 }

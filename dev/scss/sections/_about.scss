@@ -3,57 +3,76 @@
     width: 100vw;
     background-color: black;
 
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-areas: ". about .";
+
     @include md{
         position: relative;
     }
 
-    #about-svg{
-        width: 30%;
-        height: 30%;
-        margin-left: 60%;
-        padding-top: 20%;
+    #about-container{
+        grid-area: about;
 
-        @include md{
-            width: 25%;
-            height: 25%;
-            margin-left: 65%;
+        #about-svg-container{
+            display: grid;
+            grid-template-columns: 50% auto 5%;
+            grid-template-areas: ". about-svg .";
+
             padding-top: 15%;
-            position: absolute;
-        }
+            position: relative;
 
-        @include lg{
-            width: 20%;
-            height: 20%;
-            margin-left: 70%;
-            padding-top: 10%;
+            @include md{ 
+                padding-top: 10%;
+                grid-template-columns: 60% auto 5%;
+            }
+
+            @include lg{ 
+                padding-top: 5%;
+                grid-template-columns: 65% auto 5%;
+            }
+
+            #about-svg{
+                grid-area: about-svg;
+                position: absolute;
+            }
         }
     }
 
-    #about-text{
-        height: 100%;
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-top: 10%;
-        padding-bottom: 10%;
+    #about-text-container{
+        display: grid;
+        grid-template-columns: 30px auto 30px;
+        grid-template-areas: ". about-text .";
 
-        @include md{
-            width: 45%;
-            padding-top: 15%;
-            max-width: 375px;
+        padding-top: 65%;
+
+            @include md{
+                padding-top: 30%;  
+                grid-template-columns: 5% auto 40%; 
+            }
+
+            @include lg{
+                padding-top: 5%; 
+                grid-template-columns: 10% auto 55%; 
+            }
+            
+            @include xl{
+                padding-top: 5%; 
+                grid-template-columns: 10% auto 60%; 
+            }
+
+        #about-text{
+            grid-area: about-text;
+
+            p{
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                font-size: rem-calc(16);
+                padding: 1em;
+                background-color: black;
+            }
         }
 
-        @include lg{ 
-        padding-top: 10%;
-        max-width: 350px;
-        }
-
-        p{
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            font-size: rem-calc(16);
-            padding: 1em;
-            background-color: black;
-        }
     }
 }

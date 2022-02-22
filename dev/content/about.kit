@@ -1,22 +1,24 @@
 <section id="about">
-    <div>
-        <div id="about-svg">
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 393 509">
-                <path id="about" fill-rule="evenodd" clip-rule="evenodd" d="M.258 213h51.729C25.244 233.553 8.03 265.614 8.03 301.5c0 61.8 50.1 112.2 111.9 112.2 3.601 0 7.17-.187 10.688-.541v1.141c-2.1 65.7 20.1 94.2 88.5 94.2 43.8 0 60.9-27.3 60.9-96.6v-27.3c0-35.643 3.941-57.014 8.703-69.881V473.4c0 22.962-11.225 29.597-12.737 30.49-.128.075-.186.11-.163.11h65.4s-13.5-5.7-13.5-30.6v-177c24.3 0 55.2 12.9 65.1 21l-10.2-22.5h-83.217c45.136-15.093 63.635-50.898 50.993-89.964-14.686-45.383-61.748-44.658-110.725-31.332 54.273-22.292 67.251-41.627 60.231-63.319-8.312-25.689-43.95-29.607-99.323-11.689l-36.696 11.875L129.558.3c-20.7 6-36.3 5.7-45.9 5.1l3 2.4c-12.9 44.7-32.4 104.7-48.3 142.5-21 51.3-38.1 62.7-38.1 62.7Zm259.057 81.9c30.549-12.122 67.163-37.211 53.978-77.956-10.53-32.539-57.929-47.471-101.314-33.432L248.023 294.9h11.292Zm2.933 6.051c-1.092-.013-2.186-.021-3.304-.013-10.904 3.136-20.686 7.467-27.648 11.577-3.65 37.299-25.565 67.726-53.465 84.685a100.799 100.799 0 0 1-8.212 4.622V431.1c0 50.1 25.2 68.1 56.7 68.1 37.5 0 51.9-30.3 51.9-87.3v-27.3c0-53.727-8.833-75.028-15.971-83.649Zm-92.629 98.811a52.067 52.067 0 0 0 7.312-3.762c20.68-13.322 30.684-41.801 25.732-75.828-.313.239-.582.449-.809.626 0 0 .299-.338.748-1.039-2.56-17.195-8.934-35.793-19.671-54.559-28.2-48.3-81-81.9-120.3-57.9-36.9 24-31.2 85.8-5.4 130.5 19.398 33.808 46.873 56.353 73.388 63.572V320.4c0-25.2-13.5-25.5-13.5-25.5h65.4s-12.9 1.2-12.9 30v74.862ZM62.031 206.1a114.174 114.174 0 0 0-6.18 4.056c-.162-1.623-.926-3.949-1.925-6.992-3.49-10.629-9.855-30.016-3.568-58.864h81.9c7.104 22.627 10.17 37.582 10.842 47.698a112.501 112.501 0 0 0-23.169-2.398c-26.7 0-48 9.9-57.9 16.5Zm-11.373-63.6c6.742-29.615 19.667-73.528 30.09-108.944 2.565-8.713 4.978-16.911 7.11-24.256 3.3 4.2 5.7 10.5 44.1 133.2h-81.3Zm135.921-37.481 24.845 76.78c34.252-11.083 58.764-36.673 51.467-59.222-6.558-20.265-42.078-26.744-76.312-17.558Z" fill="#FF3F47"/>
+    <div id="about-container">
+        <div id="about-svg-container">
+             <svg id="about-svg" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 393 509">
+                <path id="about-path" fill-rule="evenodd" clip-rule="evenodd" d="M.258 213h51.729C25.244 233.553 8.03 265.614 8.03 301.5c0 61.8 50.1 112.2 111.9 112.2 3.601 0 7.17-.187 10.688-.541v1.141c-2.1 65.7 20.1 94.2 88.5 94.2 43.8 0 60.9-27.3 60.9-96.6v-27.3c0-35.643 3.941-57.014 8.703-69.881V473.4c0 22.962-11.225 29.597-12.737 30.49-.128.075-.186.11-.163.11h65.4s-13.5-5.7-13.5-30.6v-177c24.3 0 55.2 12.9 65.1 21l-10.2-22.5h-83.217c45.136-15.093 63.635-50.898 50.993-89.964-14.686-45.383-61.748-44.658-110.725-31.332 54.273-22.292 67.251-41.627 60.231-63.319-8.312-25.689-43.95-29.607-99.323-11.689l-36.696 11.875L129.558.3c-20.7 6-36.3 5.7-45.9 5.1l3 2.4c-12.9 44.7-32.4 104.7-48.3 142.5-21 51.3-38.1 62.7-38.1 62.7Zm259.057 81.9c30.549-12.122 67.163-37.211 53.978-77.956-10.53-32.539-57.929-47.471-101.314-33.432L248.023 294.9h11.292Zm2.933 6.051c-1.092-.013-2.186-.021-3.304-.013-10.904 3.136-20.686 7.467-27.648 11.577-3.65 37.299-25.565 67.726-53.465 84.685a100.799 100.799 0 0 1-8.212 4.622V431.1c0 50.1 25.2 68.1 56.7 68.1 37.5 0 51.9-30.3 51.9-87.3v-27.3c0-53.727-8.833-75.028-15.971-83.649Zm-92.629 98.811a52.067 52.067 0 0 0 7.312-3.762c20.68-13.322 30.684-41.801 25.732-75.828-.313.239-.582.449-.809.626 0 0 .299-.338.748-1.039-2.56-17.195-8.934-35.793-19.671-54.559-28.2-48.3-81-81.9-120.3-57.9-36.9 24-31.2 85.8-5.4 130.5 19.398 33.808 46.873 56.353 73.388 63.572V320.4c0-25.2-13.5-25.5-13.5-25.5h65.4s-12.9 1.2-12.9 30v74.862ZM62.031 206.1a114.174 114.174 0 0 0-6.18 4.056c-.162-1.623-.926-3.949-1.925-6.992-3.49-10.629-9.855-30.016-3.568-58.864h81.9c7.104 22.627 10.17 37.582 10.842 47.698a112.501 112.501 0 0 0-23.169-2.398c-26.7 0-48 9.9-57.9 16.5Zm-11.373-63.6c6.742-29.615 19.667-73.528 30.09-108.944 2.565-8.713 4.978-16.911 7.11-24.256 3.3 4.2 5.7 10.5 44.1 133.2h-81.3Zm135.921-37.481 24.845 76.78c34.252-11.083 58.764-36.673 51.467-59.222-6.558-20.265-42.078-26.744-76.312-17.558Z" fill="#FF3F47"/>
             </svg>
         </div>
-        <div id="about-text">
-            <p id="about-p1" class="about-paragraphs">
-                 My passion lies with design and its social impact. Design involves problem-solving and a specific way of thinking to be able to perform certain needs for any business or industry. Design has the power to transform an industry a company and a community and I am eager to be a part of that change. 
-            </p>  
-    
-            <p id="about-p1" class="about-paragraphs">   
-                Through design, I have formed skills of collaboration in the classroom and the workplace. Collaboration is a building block of design and without it boundaries would not be pushed and creativity would not flourish. Presenting designs is another form of communication to ensure that my vision is understood. This portfolio reveals my commitment to the research process and production to produce my vision for each design.
-            </p>
-    
-            <p id="about-p1" class="about-paragraphs">   
-                When I am not in the studio, I am reading a book, I am on a hike, or working on my photography skills. 
-            </p>
+        <div id="about-text-container">
+            <div id="about-text">
+                <p id="about-p1" class="about-paragraphs">
+                     My passion lies with design and its social impact. Design involves problem-solving and a specific way of thinking to be able to perform certain needs for any business or industry. Design has the power to transform an industry a company and a community and I am eager to be a part of that change. 
+                </p>  
+        
+                <p id="about-p1" class="about-paragraphs">   
+                    Through design, I have formed skills of collaboration in the classroom and the workplace. Collaboration is a building block of design and without it boundaries would not be pushed and creativity would not flourish. Presenting designs is another form of communication to ensure that my vision is understood. This portfolio reveals my commitment to the research process and production to produce my vision for each design.
+                </p>
+        
+                <p id="about-p1" class="about-paragraphs">   
+                    When I am not in the studio, I am reading a book, I am on a hike, or working on my photography skills. 
+                </p>
+            </div>
         </div>
     </div>
 </section>
