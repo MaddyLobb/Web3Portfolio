@@ -600,12 +600,12 @@ header {
 #photography #photography-container {
   grid-area: photography;
   display: grid;
-  grid-template-areas: "project-svg" "photography-image-1" "photography-text";
+  grid-template-areas: "project-svg" "photography-images" "photography-text";
   gap: 10px;
 }
 @media (min-width: 768px) {
   #photography #photography-container {
-    grid-template-areas: "project-svg . " "photography-text photography-image-1";
+    grid-template-areas: "project-svg . " "photography-text photography-images";
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
@@ -635,48 +635,56 @@ header {
 #photography #photography-container #project-svg-container #project-svg {
   grid-area: project-svg-2;
 }
-#photography #photography-container #photo1-photography-image {
+#photography #photography-container #photography-image-container {
+  grid-area: photography-images;
+  display: flex;
+  justify-content: center;
+}
+#photography #photography-container #photography-image-container #photo1-photography-image {
   height: 609px;
   width: 359px;
   background-image: url("../img/Photo1.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: photography-image-1;
 }
 @media (min-width: 1024px) {
-  #photography #photography-container #photo1-photography-image {
+  #photography #photography-container #photography-image-container #photo1-photography-image {
     height: 750px;
     width: 458px;
   }
 }
 #photography #photography-container #photography-text-container {
   grid-area: photography-text;
+  display: flex;
+  justify-content: center;
+}
+#photography #photography-container #photography-text-container #photography-text {
   max-width: 450px;
 }
 @media (min-width: 768px) {
-  #photography #photography-container #photography-text-container {
+  #photography #photography-container #photography-text-container #photography-text {
     max-width: 325px;
   }
 }
 @media (min-width: 1024px) {
-  #photography #photography-container #photography-text-container {
+  #photography #photography-container #photography-text-container #photography-text {
     max-width: 400px;
   }
 }
-#photography #photography-container #photography-text-container h1 {
+#photography #photography-container #photography-text-container #photography-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
   color: white;
   padding-top: 5%;
 }
 @media (min-width: 768px) {
-  #photography #photography-container #photography-text-container h1 {
+  #photography #photography-container #photography-text-container #photography-text h1 {
     font-size: 2.5rem;
     padding-bottom: 20px;
     padding-top: 0%;
   }
 }
-#photography #photography-container #photography-text-container p {
+#photography #photography-container #photography-text-container #photography-text p {
   font-weight: 400;
   font-size: 1rem;
   color: white;
@@ -684,7 +692,7 @@ header {
   line-height: 1.3em;
 }
 @media (min-width: 768px) {
-  #photography #photography-container #photography-text-container p {
+  #photography #photography-container #photography-text-container #photography-text p {
     font-size: 1.25rem;
   }
 }
@@ -705,83 +713,85 @@ header {
     grid-template-areas: "branding-image-1 branding-text";
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 100%);
-    grid-gap: 40px;
+    gap: 30px;
   }
 }
-@media (min-width: 1024px) {
-  #branding #branding-container {
-    grid-gap: 60px;
-  }
+#branding #branding-container #branding-image-container {
+  grid-area: branding-image-1;
 }
-#branding #branding-container #photo1-branding-image {
+#branding #branding-container #branding-image-container #photo1-branding-image {
   height: 609px;
   width: 100%;
   background-image: url("../img/sjbcard.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: branding-image-1;
 }
 @media (min-width: 768px) {
-  #branding #branding-container #photo1-branding-image {
+  #branding #branding-container #branding-image-container #photo1-branding-image {
     height: 750px;
   }
 }
 #branding #branding-container #branding-text-container {
   grid-area: branding-text;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+#branding #branding-container #branding-text-container #branding-text {
   max-width: 450px;
-  margin: 25px;
 }
 @media (min-width: 768px) {
-  #branding #branding-container #branding-text-container {
+  #branding #branding-container #branding-text-container #branding-text {
     max-width: 325px;
     margin: 0px;
-    padding-right: 10%;
-    padding-top: 10%;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1024px) {
-  #branding #branding-container #branding-text-container {
+  #branding #branding-container #branding-text-container #branding-text {
     max-width: 400px;
   }
 }
-#branding #branding-container #branding-text-container h1 {
+#branding #branding-container #branding-text-container #branding-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #branding #branding-container #branding-text-container h1 {
+  #branding #branding-container #branding-text-container #branding-text h1 {
     font-size: 2.5rem;
   }
 }
-#branding #branding-container #branding-text-container h3 {
+#branding #branding-container #branding-text-container #branding-text h3 {
   font-weight: 800;
   font-size: 1.25rem;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #branding #branding-container #branding-text-container h3 {
+  #branding #branding-container #branding-text-container #branding-text h3 {
     padding-bottom: 20px;
   }
 }
-#branding #branding-container #branding-text-container p {
+#branding #branding-container #branding-text-container #branding-text p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3em;
 }
 @media (min-width: 768px) {
-  #branding #branding-container #branding-text-container p {
+  #branding #branding-container #branding-text-container #branding-text p {
     font-size: 1.25rem;
   }
 }
 
 #poster {
   background-color: black;
-  height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 30px auto 30px;
   grid-template-areas: ". poster.";
   padding-top: 10%;
+  padding-bottom: 5%;
 }
 @media (min-width: 768px) {
   #poster {
@@ -791,62 +801,71 @@ header {
 #poster #poster-container {
   grid-area: poster;
   display: grid;
-  grid-template-areas: "poster-image-1" "poster-text";
-  grid-gap: 10px;
+  grid-template-areas: "poster-image" "poster-text";
+  gap: 10px;
 }
 @media (min-width: 768px) {
   #poster #poster-container {
-    grid-template-areas: "poster-text poster-image-1";
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 100%);
-    grid-gap: 40px;
+    grid-template-areas: "poster-text poster-image";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 }
 @media (min-width: 1024px) {
   #poster #poster-container {
-    grid-gap: 60px;
+    gap: 60px;
   }
 }
-#poster #poster-container #photo1-poster-image {
+#poster #poster-container #poster-imgage-container {
+  grid-area: poster-image;
+  display: flex;
+  justify-content: center;
+}
+#poster #poster-container #poster-imgage-container #photo1-poster-image {
   height: 609px;
   width: 359px;
   background-image: url("../img/Bembo.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: poster-image-1;
 }
 @media (min-width: 1024px) {
-  #poster #poster-container #photo1-poster-image {
+  #poster #poster-container #poster-imgage-container #photo1-poster-image {
     height: 750px;
     width: 458px;
   }
 }
 #poster #poster-container #poster-text-container {
   grid-area: poster-text;
+  display: flex;
+  justify-content: center;
+}
+#poster #poster-container #poster-text-container #poster-text {
   max-width: 450px;
 }
 @media (min-width: 768px) {
-  #poster #poster-container #poster-text-container {
+  #poster #poster-container #poster-text-container #poster-text {
     max-width: 325px;
   }
 }
 @media (min-width: 1024px) {
-  #poster #poster-container #poster-text-container {
+  #poster #poster-container #poster-text-container #poster-text {
     max-width: 400px;
   }
 }
-#poster #poster-container #poster-text-container h1 {
+#poster #poster-container #poster-text-container #poster-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
   color: white;
+  padding-top: 5%;
 }
 @media (min-width: 768px) {
-  #poster #poster-container #poster-text-container h1 {
+  #poster #poster-container #poster-text-container #poster-text h1 {
     font-size: 2.5rem;
     padding-bottom: 20px;
+    padding-top: 0%;
   }
 }
-#poster #poster-container #poster-text-container p {
+#poster #poster-container #poster-text-container #poster-text p {
   font-weight: 400;
   font-size: 1rem;
   color: white;
@@ -854,7 +873,7 @@ header {
   line-height: 1.3em;
 }
 @media (min-width: 768px) {
-  #poster #poster-container #poster-text-container p {
+  #poster #poster-container #poster-text-container #poster-text p {
     font-size: 1.25rem;
   }
 }
@@ -875,71 +894,72 @@ header {
     grid-template-areas: "publication-image-1 publication-text";
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 100%);
-    grid-gap: 40px;
+    gap: 30px;
   }
 }
-@media (min-width: 1024px) {
-  #publication #publication-container {
-    grid-gap: 60px;
-  }
+#publication #publication-container #publication-image-container {
+  grid-area: publication-image-1;
 }
-#publication #publication-container #photo1-publication-image {
+#publication #publication-container #publication-image-container #photo1-publication-image {
   height: 609px;
   width: 100%;
   background-image: url("../img/Inspirecover.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: publication-image-1;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #photo1-publication-image {
+  #publication #publication-container #publication-image-container #photo1-publication-image {
     height: 750px;
   }
 }
 #publication #publication-container #publication-text-container {
   grid-area: publication-text;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+#publication #publication-container #publication-text-container #publication-text {
   max-width: 450px;
-  margin: 25px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container {
+  #publication #publication-container #publication-text-container #publication-text {
     max-width: 325px;
-    margin: 0px;
-    padding-right: 10%;
-    padding-top: 10%;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1024px) {
-  #publication #publication-container #publication-text-container {
+  #publication #publication-container #publication-text-container #publication-text {
     max-width: 400px;
   }
 }
-#publication #publication-container #publication-text-container h1 {
+#publication #publication-container #publication-text-container #publication-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container h1 {
+  #publication #publication-container #publication-text-container #publication-text h1 {
     font-size: 2.5rem;
   }
 }
-#publication #publication-container #publication-text-container h3 {
+#publication #publication-container #publication-text-container #publication-text h3 {
   font-weight: 800;
   font-size: 1.25rem;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container h3 {
+  #publication #publication-container #publication-text-container #publication-text h3 {
     padding-bottom: 20px;
   }
 }
-#publication #publication-container #publication-text-container p {
+#publication #publication-container #publication-text-container #publication-text p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3em;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container p {
+  #publication #publication-container #publication-text-container #publication-text p {
     font-size: 1.25rem;
   }
 }

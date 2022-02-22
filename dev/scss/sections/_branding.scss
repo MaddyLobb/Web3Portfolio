@@ -17,71 +17,76 @@
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(1, 100%);
 
-            grid-gap: 40px;
+            gap: 30px;
         }
 
-        @include lg{
-            grid-gap: 60px; 
-        }
-
-        #photo1-branding-image{
-            height: 609px;
-            width: 100%;
-            background-image: url('../img/sjbcard.jpg');
-            background-position: center;
-            background-size: cover;
-
+        #branding-image-container{
             grid-area: branding-image-1;
 
-            @include md{
-                height: 750px;  
+            #photo1-branding-image{
+                height: 609px;
+                width: 100%;
+                background-image: url('../img/sjbcard.jpg');
+                background-position: center;
+                background-size: cover;
+    
+                @include md{
+                    height: 750px;  
+                }
             }
         }
 
         #branding-text-container{
             grid-area: branding-text;
 
-            max-width: 450px;
-            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
 
-            @include md{
-                max-width: 325px; 
-                margin: 0px; 
-                padding-right: 10%;
-                padding-top: 10%;
-            }
+            padding-bottom: 30px;
 
-            @include lg{
-                max-width: 400px;
-            }
+            #branding-text{
+                max-width: 450px;
     
-            h1{
-                font-weight: 800;
-                font-size: rem-calc(26);
-
                 @include md{
-                    font-size: rem-calc(40); 
+                    max-width: 325px; 
+                    margin: 0px; 
+                    padding-right: 30px;
                 }
-            }
-
-            h3{
-                font-weight: 800;
-                font-size: rem-calc(20);
-                padding-bottom: 10px;
-
-                @include md{
-                    padding-bottom: 20px;
+    
+                @include lg{
+                    max-width: 400px;
                 }
-            }
-            
-            p{
-                font-weight: 400;
-                font-size: rem-calc(16); 
-                line-height: 1.3em;
-
-                @include md{
-                    font-size: rem-calc(20); 
+        
+                h1{
+                    font-weight: 800;
+                    font-size: rem-calc(26);
+                    padding-bottom: 10px;
+    
+                    @include md{
+                        font-size: rem-calc(40); 
+                    }
                 }
+    
+                h3{
+                    font-weight: 800;
+                    font-size: rem-calc(20);
+                    padding-bottom: 10px;
+    
+                    @include md{
+                        padding-bottom: 20px;
+                    }
+                }
+                
+                p{
+                    font-weight: 400;
+                    font-size: rem-calc(16); 
+                    line-height: 1.3em;
+    
+                    @include md{
+                        font-size: rem-calc(20); 
+                    }
+                }   
             }
         }
     }

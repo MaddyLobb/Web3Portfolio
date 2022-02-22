@@ -19,13 +19,13 @@
 
         display: grid;
         grid-template-areas: "project-svg"
-                             "photography-image-1"
+                             "photography-images"
                              "photography-text";
         gap: 10px;
 
         @include md{
             grid-template-areas: "project-svg . "
-                                 "photography-text photography-image-1";
+                                 "photography-text photography-images";
             grid-template-columns: repeat(2, 1fr);
             
 
@@ -59,56 +59,67 @@
 
         }
 
-        #photo1-photography-image{
-            height: 609px;
-            width: 359px;
-            background-image: url('../img/Photo1.jpg');
-            background-position: center;
-            background-size: cover;
+        #photography-image-container{
+            grid-area: photography-images;
 
-            grid-area: photography-image-1;
+            display: flex;
+            justify-content: center;
 
-            @include lg{
-                height: 750px;
-                width: 458px;
+            #photo1-photography-image{
+                height: 609px;
+                width: 359px;
+                background-image: url('../img/Photo1.jpg');
+                background-position: center;
+                background-size: cover;
+    
+                @include lg{
+                    height: 750px;
+                    width: 458px;
+                }
             }
         }
 
         #photography-text-container{
             grid-area: photography-text;
-            max-width: 450px;
 
-            @include md{
-                max-width: 325px;  
-            }
+            display: flex;
+            justify-content: center;
 
-            @include lg{
-                max-width: 400px;
-            }
-    
-            h1{
-                font-weight: 800;
-                font-size: rem-calc(26);
-                color: white;
-                padding-top: 5%;
+            #photography-text{
+                max-width: 450px;
 
                 @include md{
-                    font-size: rem-calc(40); 
-                    padding-bottom: 20px;
-                    padding-top: 0%;
-
+                    max-width: 325px;  
                 }
-            }
-            
-            p{
-                font-weight: 400;
-                font-size: rem-calc(16); 
-                color: white;
-                padding-bottom: 5%;
-                line-height: 1.3em;
 
-                @include md{
-                    font-size: rem-calc(20); 
+                @include lg{
+                    max-width: 400px;
+                }
+
+                h1{
+                    font-weight: 800;
+                    font-size: rem-calc(26);
+                    color: white;
+                    padding-top: 5%;
+    
+                    @include md{
+                        font-size: rem-calc(40); 
+                        padding-bottom: 20px;
+                        padding-top: 0%;
+    
+                    }
+                }
+                
+                p{
+                    font-weight: 400;
+                    font-size: rem-calc(16); 
+                    color: white;
+                    padding-bottom: 5%;
+                    line-height: 1.3em;
+    
+                    @include md{
+                        font-size: rem-calc(20); 
+                    }
                 }
             }
         }
