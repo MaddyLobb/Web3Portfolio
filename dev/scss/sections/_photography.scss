@@ -3,49 +3,108 @@
     height: 100vh;
     width: 100vw;
 
-    #photo1-photography-image{
-        display: inline-block;
-        width: 100%;
-        padding-top: 10%;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-areas: ". photography .";
 
-        @include md{
-            float: right;
-            //height: 100%;
-            width: 40%;
-            padding-right: 10%;
-        }
+    padding-top: 10%;
 
-        img{
-            //height: 100%;
-            width: 100%;
-        }
-
+    @include md{
+        grid-template-columns: 10% auto 10%;  
     }
 
-    #photography-projects-text{
-        display: inline-block;
-        width: 90%;
-        padding-top: 5%;
-        padding-left: 5%;
+    #photography-container{
+        grid-area: photography;
+
+        display: grid;
+        grid-template-areas: "image-1"
+                             "photography-text";
+        grid-gap: 20px;
+        grid-template-rows: repeat(2, 70%);
 
         @include md{
-            float: left;
-            width: 35%;
-            padding-top: 10%;
-            padding-left: 10%;
+            grid-template-areas: "photography-text image-1";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 100%);
+
+            position: relative;
         }
 
-        h1{
-            font-weight: 800;
-            font-size: rem-calc(26);
-            color: white;
+        #photo1-photography-image{
+            //width: 100%;
+            background-image: url('../img/Photo1.jpg');
+            background-position: center;
+            background-size: cover;
+
+            grid-area: image-1;
+
+            @include md{
+                position: absolute;
+            }
         }
+
+        #photography-projects-text{
+            grid-area: photography-text;
+    
+            h1{
+                font-weight: 800;
+                font-size: rem-calc(26);
+                color: white;
+            }
+            
+            p{
+                font-weight: 400;
+                font-size: rem-calc(16); 
+                color: white;
+                padding-bottom: 5%;
+            }
+        }
+    }
+
+    // #photo1-photography-image{
+    //     display: inline-block;
+    //     width: 100%;
+    //     padding-top: 10%;
+
+    //     @include md{
+    //         float: right;
+    //         //height: 100%;
+    //         width: 40%;
+    //         padding-right: 10%;
+    //     }
+
+    //     img{
+    //         //height: 100%;
+    //         width: 100%;
+    //     }
+
+    // }
+
+    // #photography-projects-text{
+    //     // display: inline-block;
+    //     // width: 90%;
+    //     // padding-top: 5%;
+    //     // padding-left: 5%;
+
+    //     // @include md{
+    //     //     float: left;
+    //     //     width: 35%;
+    //     //     padding-top: 10%;
+    //     //     padding-left: 10%;
+    //     // }
+    //     grid-area: photography-text;
+
+    //     h1{
+    //         font-weight: 800;
+    //         font-size: rem-calc(26);
+    //         color: white;
+    //     }
         
-        p{
-            font-weight: 400;
-            font-size: rem-calc(16); 
-            color: white;
-            padding-bottom: 5%;
-        }
-    }
+    //     p{
+    //         font-weight: 400;
+    //         font-size: rem-calc(16); 
+    //         color: white;
+    //         padding-bottom: 5%;
+    //     }
+    // }
 }

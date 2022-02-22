@@ -455,49 +455,54 @@ header {
 #hero {
   height: 100vh;
   width: 100vw;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../img/hero.jpg");
+  background-position: center;
+  background-size: cover;
 }
-#hero h1 {
+#hero div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#hero div h1 {
   color: white;
   font-family: "Sonder-Medium", serif;
   font-size: 6.25rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #hero h1 {
+  #hero div h1 {
     font-size: 12.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #hero h1 {
+  #hero div h1 {
     font-size: 15.625rem;
   }
 }
 @media (min-width: 1440px) {
-  #hero h1 {
+  #hero div h1 {
     font-size: 18.75rem;
   }
 }
-#hero h3 {
+#hero div h3 {
   color: white;
   font-size: 2.1875rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #hero h3 {
+  #hero div h3 {
     font-size: 2.8125rem;
   }
 }
 @media (min-width: 1024px) {
-  #hero h3 {
+  #hero div h3 {
     font-size: 3.125rem;
   }
 }
 @media (min-width: 1440px) {
-  #hero h3 {
+  #hero div h3 {
     font-size: 3.75rem;
   }
 }
@@ -581,42 +586,51 @@ header {
   background-color: black;
   height: 100vh;
   width: 100vw;
-}
-#photography #photo1-photography-image {
-  display: inline-block;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-areas: ". photography .";
   padding-top: 10%;
 }
 @media (min-width: 768px) {
-  #photography #photo1-photography-image {
-    float: right;
-    width: 40%;
-    padding-right: 10%;
+  #photography {
+    grid-template-columns: 10% auto 10%;
   }
 }
-#photography #photo1-photography-image img {
-  width: 100%;
-}
-#photography #photography-projects-text {
-  display: inline-block;
-  width: 90%;
-  padding-top: 5%;
-  padding-left: 5%;
+#photography #photography-container {
+  grid-area: photography;
+  display: grid;
+  grid-template-areas: "image-1" "photography-text";
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 70%);
 }
 @media (min-width: 768px) {
-  #photography #photography-projects-text {
-    float: left;
-    width: 35%;
-    padding-top: 10%;
-    padding-left: 10%;
+  #photography #photography-container {
+    grid-template-areas: "photography-text image-1";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 100%);
+    position: relative;
   }
 }
-#photography #photography-projects-text h1 {
+#photography #photography-container #photo1-photography-image {
+  background-image: url("../img/Photo1.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: image-1;
+}
+@media (min-width: 768px) {
+  #photography #photography-container #photo1-photography-image {
+    position: absolute;
+  }
+}
+#photography #photography-container #photography-projects-text {
+  grid-area: photography-text;
+}
+#photography #photography-container #photography-projects-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
   color: white;
 }
-#photography #photography-projects-text p {
+#photography #photography-container #photography-projects-text p {
   font-weight: 400;
   font-size: 1rem;
   color: white;
