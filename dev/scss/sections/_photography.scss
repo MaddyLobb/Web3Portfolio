@@ -1,6 +1,5 @@
 #photography{
     background-color: black;
-    height: 100vh;
     width: 100vw;
 
     display: grid;
@@ -8,29 +7,56 @@
     grid-template-areas: ". photography .";
 
     padding-top: 10%;
+    padding-bottom: 5%;
 
     @include md{
         grid-template-columns: 10% auto 10%;  
+        padding-top: 0%;
     }
 
     #photography-container{
         grid-area: photography;
 
         display: grid;
-        grid-template-areas: "photography-image-1"
+        grid-template-areas: "project-svg"
+                             "photography-image-1"
                              "photography-text";
-        grid-gap: 10px;
+        gap: 10px;
 
         @include md{
-            grid-template-areas: "photography-text photography-image-1";
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(1, 100%);
+            grid-template-areas: "project-svg . "
+                                 "photography-text photography-image-1";
+            grid-template-columns: repeat(2, 1fr);
+            
 
-            grid-gap: 40px;
+            gap: 40px;
         }
 
         @include lg{
-            grid-gap: 60px; 
+            gap: 60px; 
+        }
+
+        #project-svg-container{
+            grid-area: project-svg;
+
+            display: grid;
+            grid-template-columns: auto 50%;
+            grid-template-areas: "project-svg-2";
+
+            padding-bottom: 5%;
+
+            @include md{ 
+                grid-template-columns: auto 5%;
+            }
+
+            @include lg{ 
+                grid-template-columns: auto 5%;
+            }
+
+            #project-svg{
+                grid-area: project-svg-2;
+            }
+
         }
 
         #photo1-photography-image{
@@ -64,10 +90,12 @@
                 font-weight: 800;
                 font-size: rem-calc(26);
                 color: white;
+                padding-top: 5%;
 
                 @include md{
                     font-size: rem-calc(40); 
                     padding-bottom: 20px;
+                    padding-top: 0%;
 
                 }
             }
