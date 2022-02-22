@@ -1,19 +1,28 @@
-#branding{
+#poster{
+    background-color: black;
+    height: 100vh;
     width: 100vw;
 
     display: grid;
-    grid-template-columns: 0px auto 0px;
-    grid-template-areas: ". branding .";
+    grid-template-columns: 30px auto 30px;
+    grid-template-areas: ". poster.";
 
-    #branding-container{
-        grid-area: branding;
+    padding-top: 10%;
+
+    @include md{
+        grid-template-columns: 10% auto 10%;  
+    }
+
+    #poster-container{
+        grid-area: poster;
 
         display: grid;
-        grid-template-areas: "branding-image-1"
-                             "branding-text";
+        grid-template-areas: "poster-image-1"
+                             "poster-text";
+        grid-gap: 10px;
 
         @include md{
-            grid-template-areas: "branding-image-1 branding-text";
+            grid-template-areas: "poster-text poster-image-1";
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(1, 100%);
 
@@ -24,31 +33,27 @@
             grid-gap: 60px; 
         }
 
-        #photo1-branding-image{
+        #photo1-poster-image{
             height: 609px;
-            width: 100%;
-            background-image: url('../img/sjbcard.jpg');
+            width: 359px;
+            background-image: url('../img/Bembo.jpg');
             background-position: center;
             background-size: cover;
 
-            grid-area: branding-image-1;
+            grid-area: poster-image-1;
 
-            @include md{
-                height: 750px;  
+            @include lg{
+                height: 750px;
+                width: 458px;
             }
         }
 
-        #branding-text-container{
-            grid-area: branding-text;
-
+        #poster-text-container{
+            grid-area: poster-text;
             max-width: 450px;
-            margin: 25px;
 
             @include md{
-                max-width: 325px; 
-                margin: 0px; 
-                padding-right: 10%;
-                padding-top: 10%;
+                max-width: 325px;  
             }
 
             @include lg{
@@ -58,25 +63,20 @@
             h1{
                 font-weight: 800;
                 font-size: rem-calc(26);
+                color: white;
 
                 @include md{
                     font-size: rem-calc(40); 
-                }
-            }
-
-            h3{
-                font-weight: 800;
-                font-size: rem-calc(20);
-                padding-bottom: 10px;
-
-                @include md{
                     padding-bottom: 20px;
+
                 }
             }
             
             p{
                 font-weight: 400;
                 font-size: rem-calc(16); 
+                color: white;
+                padding-bottom: 5%;
                 line-height: 1.3em;
 
                 @include md{
@@ -84,5 +84,5 @@
                 }
             }
         }
-    }
+   }
 }

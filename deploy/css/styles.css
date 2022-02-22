@@ -599,95 +599,327 @@ header {
 #photography #photography-container {
   grid-area: photography;
   display: grid;
-  grid-template-areas: "image-1" "photography-text";
-  grid-gap: 20px;
-  grid-template-rows: repeat(2, 70%);
+  grid-template-areas: "photography-image-1" "photography-text";
+  grid-gap: 10px;
 }
 @media (min-width: 768px) {
   #photography #photography-container {
-    grid-template-areas: "photography-text image-1";
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "photography-text photography-image-1";
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 100%);
-    position: relative;
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #photography #photography-container {
+    grid-gap: 60px;
   }
 }
 #photography #photography-container #photo1-photography-image {
+  height: 609px;
+  width: 359px;
   background-image: url("../img/Photo1.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: image-1;
+  grid-area: photography-image-1;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #photography #photography-container #photo1-photography-image {
-    position: absolute;
+    height: 750px;
+    width: 458px;
   }
 }
-#photography #photography-container #photography-projects-text {
+#photography #photography-container #photography-text-container {
   grid-area: photography-text;
+  max-width: 450px;
 }
-#photography #photography-container #photography-projects-text h1 {
+@media (min-width: 768px) {
+  #photography #photography-container #photography-text-container {
+    max-width: 325px;
+  }
+}
+@media (min-width: 1024px) {
+  #photography #photography-container #photography-text-container {
+    max-width: 400px;
+  }
+}
+#photography #photography-container #photography-text-container h1 {
   font-weight: 800;
   font-size: 1.625rem;
   color: white;
 }
-#photography #photography-container #photography-projects-text p {
+@media (min-width: 768px) {
+  #photography #photography-container #photography-text-container h1 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+}
+#photography #photography-container #photography-text-container p {
   font-weight: 400;
   font-size: 1rem;
   color: white;
   padding-bottom: 5%;
+  line-height: 1.3em;
+}
+@media (min-width: 768px) {
+  #photography #photography-container #photography-text-container p {
+    font-size: 1.25rem;
+  }
 }
 
 #branding {
-  height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template-columns: 0px auto 0px;
+  grid-template-areas: ". branding .";
 }
-#branding #STJCH-branding-left {
-  display: inline-block;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  #branding #STJCH-branding-left {
-    float: left;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 60%;
-  }
-}
-#branding #STJCH-branding-left img {
-  width: 100%;
-}
-#branding #STJCH-branding-right {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+#branding #branding-container {
+  grid-area: branding;
+  display: grid;
+  grid-template-areas: "branding-image-1" "branding-text";
 }
 @media (min-width: 768px) {
-  #branding #STJCH-branding-right {
-    float: right;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 40%;
+  #branding #branding-container {
+    grid-template-areas: "branding-image-1 branding-text";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 100%);
+    grid-gap: 40px;
   }
 }
-#branding #STJCH-branding-right h1 {
+@media (min-width: 1024px) {
+  #branding #branding-container {
+    grid-gap: 60px;
+  }
+}
+#branding #branding-container #photo1-branding-image {
+  height: 609px;
+  width: 100%;
+  background-image: url("../img/sjbcard.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: branding-image-1;
+}
+@media (min-width: 768px) {
+  #branding #branding-container #photo1-branding-image {
+    height: 750px;
+  }
+}
+#branding #branding-container #branding-text-container {
+  grid-area: branding-text;
+  max-width: 450px;
+  margin: 25px;
+}
+@media (min-width: 768px) {
+  #branding #branding-container #branding-text-container {
+    max-width: 325px;
+    margin: 0px;
+    padding-right: 10%;
+    padding-top: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #branding #branding-container #branding-text-container {
+    max-width: 400px;
+  }
+}
+#branding #branding-container #branding-text-container h1 {
   font-weight: 800;
   font-size: 1.625rem;
-  padding-top: 5%;
-  padding-left: 5%;
 }
-#branding #STJCH-branding-right h3 {
+@media (min-width: 768px) {
+  #branding #branding-container #branding-text-container h1 {
+    font-size: 2.5rem;
+  }
+}
+#branding #branding-container #branding-text-container h3 {
   font-weight: 800;
   font-size: 1.25rem;
-  padding-left: 5%;
+  padding-bottom: 10px;
 }
-#branding #STJCH-branding-right p {
+@media (min-width: 768px) {
+  #branding #branding-container #branding-text-container h3 {
+    padding-bottom: 20px;
+  }
+}
+#branding #branding-container #branding-text-container p {
   font-weight: 400;
   font-size: 1rem;
-  padding-left: 5%;
-  padding-right: 5%;
+  line-height: 1.3em;
+}
+@media (min-width: 768px) {
+  #branding #branding-container #branding-text-container p {
+    font-size: 1.25rem;
+  }
+}
+
+#poster {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-areas: ". poster.";
+  padding-top: 10%;
+}
+@media (min-width: 768px) {
+  #poster {
+    grid-template-columns: 10% auto 10%;
+  }
+}
+#poster #poster-container {
+  grid-area: poster;
+  display: grid;
+  grid-template-areas: "poster-image-1" "poster-text";
+  grid-gap: 10px;
+}
+@media (min-width: 768px) {
+  #poster #poster-container {
+    grid-template-areas: "poster-text poster-image-1";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 100%);
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #poster #poster-container {
+    grid-gap: 60px;
+  }
+}
+#poster #poster-container #photo1-poster-image {
+  height: 609px;
+  width: 359px;
+  background-image: url("../img/Bembo.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: poster-image-1;
+}
+@media (min-width: 1024px) {
+  #poster #poster-container #photo1-poster-image {
+    height: 750px;
+    width: 458px;
+  }
+}
+#poster #poster-container #poster-text-container {
+  grid-area: poster-text;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  #poster #poster-container #poster-text-container {
+    max-width: 325px;
+  }
+}
+@media (min-width: 1024px) {
+  #poster #poster-container #poster-text-container {
+    max-width: 400px;
+  }
+}
+#poster #poster-container #poster-text-container h1 {
+  font-weight: 800;
+  font-size: 1.625rem;
+  color: white;
+}
+@media (min-width: 768px) {
+  #poster #poster-container #poster-text-container h1 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+}
+#poster #poster-container #poster-text-container p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
   padding-bottom: 5%;
+  line-height: 1.3em;
+}
+@media (min-width: 768px) {
+  #poster #poster-container #poster-text-container p {
+    font-size: 1.25rem;
+  }
+}
+
+#publication {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 0px auto 0px;
+  grid-template-areas: ". publication .";
+}
+#publication #publication-container {
+  grid-area: publication;
+  display: grid;
+  grid-template-areas: "publication-image-1" "publication-text";
+}
+@media (min-width: 768px) {
+  #publication #publication-container {
+    grid-template-areas: "publication-image-1 publication-text";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 100%);
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #publication #publication-container {
+    grid-gap: 60px;
+  }
+}
+#publication #publication-container #photo1-publication-image {
+  height: 609px;
+  width: 100%;
+  background-image: url("../img/Inspirecover.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: publication-image-1;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #photo1-publication-image {
+    height: 750px;
+  }
+}
+#publication #publication-container #publication-text-container {
+  grid-area: publication-text;
+  max-width: 450px;
+  margin: 25px;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-text-container {
+    max-width: 325px;
+    margin: 0px;
+    padding-right: 10%;
+    padding-top: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #publication #publication-container #publication-text-container {
+    max-width: 400px;
+  }
+}
+#publication #publication-container #publication-text-container h1 {
+  font-weight: 800;
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-text-container h1 {
+    font-size: 2.5rem;
+  }
+}
+#publication #publication-container #publication-text-container h3 {
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-text-container h3 {
+    padding-bottom: 20px;
+  }
+}
+#publication #publication-container #publication-text-container p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-text-container p {
+    font-size: 1.25rem;
+  }
 }
 
 #contact {

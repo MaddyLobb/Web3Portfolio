@@ -1,19 +1,19 @@
-#branding{
+#publication{
     width: 100vw;
 
     display: grid;
     grid-template-columns: 0px auto 0px;
-    grid-template-areas: ". branding .";
+    grid-template-areas: ". publication .";
 
-    #branding-container{
-        grid-area: branding;
+    #publication-container{
+        grid-area: publication;
 
         display: grid;
-        grid-template-areas: "branding-image-1"
-                             "branding-text";
+        grid-template-areas: "publication-image-1"
+                             "publication-text";
 
         @include md{
-            grid-template-areas: "branding-image-1 branding-text";
+            grid-template-areas: "publication-image-1 publication-text";
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(1, 100%);
 
@@ -24,22 +24,22 @@
             grid-gap: 60px; 
         }
 
-        #photo1-branding-image{
+        #photo1-publication-image{
             height: 609px;
             width: 100%;
-            background-image: url('../img/sjbcard.jpg');
+            background-image: url('../img/Inspirecover.jpg');
             background-position: center;
             background-size: cover;
 
-            grid-area: branding-image-1;
+            grid-area: publication-image-1;
 
             @include md{
                 height: 750px;  
             }
         }
 
-        #branding-text-container{
-            grid-area: branding-text;
+        #publication-text-container{
+            grid-area: publication-text;
 
             max-width: 450px;
             margin: 25px;
