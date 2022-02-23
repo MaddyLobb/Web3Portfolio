@@ -44,6 +44,11 @@
             align-items: flex-end;
 
             padding-bottom: 30px;
+            padding-top: 5%;
+
+            @include md{
+                padding-top: 0%;
+            }
 
             #branding-text{
                 max-width: 450px;

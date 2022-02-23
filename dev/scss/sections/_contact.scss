@@ -7,48 +7,78 @@
     grid-template-columns: 30px auto 30px;
     grid-template-areas: ". contact .";
 
-    #contact-whole{
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+    @include md{
+        grid-template-columns: 10% auto 10%;  
+        padding-top: 0%;
+    }
+
+    #contact-container{
         grid-area: contact;
 
+        display: grid;
+        grid-template-areas: "contact-svg-1"
+                             "contact-form-1";
+        gap: 10px;
+
+        @include md{
+            grid-template-areas: ". contact-svg-1"
+                                 "contact-form-1 .";
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         #contact-svg-container{
-            display: grid;
-            grid-template-columns: 50% auto 5%;
-            grid-template-areas: ". contact-svg .";
+            grid-area: contact-svg-1;
+
+            // display: grid;
+            // grid-template-columns: 30% auto;
+            // grid-template-areas: ". contact-svg-2";
 
             padding-top: 15%;
-            position: relative;
+            padding-right: 5%;
 
             @include md{ 
-                padding-top: 10%;
+                padding-top: 20%;
+                //grid-template-columns: 20% auto;
             }
 
             @include lg{ 
-                padding-top: 5%;
+                padding-top: 25%;
+                //grid-template-columns: 30% auto;
             }
 
             #contact-svg{
-                grid-area: contact-svg;
-                position: absolute;
+                grid-area: contact-svg-2;
             }
         }
 
         #contact-form-container{
-            display: grid;
-            grid-template-columns: 5% auto 5%;
-            grid-template-areas: ". contact-form .";
+            grid-area: contact-form-1;
 
-            padding-top: 50%;
-            @include md{
-                padding-top: 35%;  
-            }
+            // display: flex;
+            // justify-content: center;
+            
+            // @include md{
+            //     padding-top: 30%;
+            // } 
 
-            @include lg{
-                padding-top: 25%; 
-                grid-template-columns: 10% auto 5%; 
-            }
+            // display: grid;
+            // grid-template-columns: 5% auto 5%;
+            // grid-template-areas: ". contact-form-2 .";
+
+            // @include md{
+            //     padding-top: 35%;  
+            // }
+
+            // @include lg{
+            //     padding-top: 25%; 
+            //     grid-template-columns: 10% auto 5%; 
+            // }
 
             #contact-form{
-                grid-area: contact-form;
+                grid-area: contact-form-2;
                 max-width: 400px;
 
                 h1{

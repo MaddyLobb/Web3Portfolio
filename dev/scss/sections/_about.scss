@@ -7,70 +7,94 @@
     grid-template-columns: 30px auto 30px;
     grid-template-areas: ". about .";
 
+    padding-top: 10%;
+    padding-bottom: 5%;
+
     @include md{
-        position: relative;
+        grid-template-columns: 10% auto 10%;  
+        padding-top: 0%;
     }
 
     #about-container{
         grid-area: about;
 
+        display: grid;
+        grid-template-areas: "about-svg-1"
+                             "about-text-1";
+        gap: 10px;
+
+        @include md{
+            grid-template-areas: "about-text-1 about-svg-1";
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 40px;
+        }
+
+        @include lg{
+            gap: 60px; 
+        }
+
         #about-svg-container{
+            grid-area: about-svg-1;
+
             display: grid;
-            grid-template-columns: 50% auto 5%;
-            grid-template-areas: ". about-svg .";
+            grid-template-columns: 50% auto;
+            grid-template-areas: ". about-svg-2";
 
             padding-top: 15%;
-            position: relative;
 
             @include md{ 
-                padding-top: 10%;
-                grid-template-columns: 60% auto 5%;
+                padding-top: 20%;
+                grid-template-columns: 20% auto;
             }
 
             @include lg{ 
-                padding-top: 5%;
-                grid-template-columns: 65% auto 5%;
+                padding-top: 25%;
+                grid-template-columns: 30% auto;
             }
 
             #about-svg{
-                grid-area: about-svg;
-                position: absolute;
+                grid-area: about-svg-2;
+                padding-right: 5%;
+
+                @include md{
+                    padding-bottom: 5%;
+                }
             }
         }
     }
 
     #about-text-container{
-        display: grid;
-        grid-template-columns: 30px auto 30px;
-        grid-template-areas: ". about-text .";
+        grid-area: about-text-1;
 
-        padding-top: 65%;
-
-            @include md{
-                padding-top: 30%;  
-                grid-template-columns: 5% auto 40%; 
-            }
-
-            @include lg{
-                padding-top: 5%; 
-                grid-template-columns: 10% auto 55%; 
-            }
-            
-            @include xl{
-                padding-top: 5%; 
-                grid-template-columns: 10% auto 60%; 
-            }
+        display: flex;
+        justify-content: center;
 
         #about-text{
-            grid-area: about-text;
+
+            max-width: 450px;
+
+                @include md{
+                    max-width: 325px; 
+                    padding-top: 20%; 
+                }
+
+                @include lg{
+                    max-width: 400px;
+                    padding-top: 25%; 
+                }
 
             p{
                 color: white;
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 400;
                 font-size: rem-calc(16);
-                padding: 1em;
+                padding-bottom: 1em;
                 background-color: black;
+
+                @include md{
+                    font-size: rem-calc(20); 
+                }
             }
         }
 
