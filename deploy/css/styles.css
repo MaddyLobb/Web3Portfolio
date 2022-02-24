@@ -443,7 +443,7 @@ nav ul li button {
     font-size: 18px;
   }
 }
-.about-btn nav ul li button:hover {
+.about-btn nav ul li:hover {
   color: #FFD400;
 }
 

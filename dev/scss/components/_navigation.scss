@@ -29,14 +29,16 @@ nav{
                 @include md{
                     font-size: 18px;
                 }
-                .about-btn &:hover{
-                    color: $yellow;
-                }
+
         
                 // &:hover{
                 //     color: $yellow;
                 // }
 
+            }
+
+            .about-btn &:hover{
+                color: $yellow;
             }
 
             // a:link, a:visited{
