@@ -427,16 +427,24 @@ nav ul {
 nav ul li {
   margin-left: 5vw;
 }
-nav ul li a:link, nav ul li a:visited {
+nav ul li button {
+  background-color: transparent;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  color: #fff;
   font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.25s;
+  cursor: pointer;
+  border: none;
 }
 @media (min-width: 768px) {
-  nav ul li a:link, nav ul li a:visited {
+  nav ul li button {
     font-size: 18px;
   }
+}
+.about-btn nav ul li button:hover {
+  color: #FFD400;
 }
 
 /* =============
