@@ -741,98 +741,56 @@ header {
 }
 
 #branding {
-  width: 100vw;
   background-color: var(--white);
-  display: grid;
-  grid-template-columns: 0px auto 0px;
-  grid-template-areas: ". branding .";
 }
-#branding #branding-container {
-  grid-area: branding;
-  display: grid;
-  grid-template-areas: "branding-image-1" "branding-text";
-}
-@media (min-width: 768px) {
-  #branding #branding-container {
-    grid-template-areas: "branding-image-1 branding-text";
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 100%);
-    gap: 30px;
-  }
-}
-#branding #branding-container #branding-image-container {
+#branding .branding-image-container {
+  position: relative;
   grid-area: branding-image-1;
+  position: absolute;
+  right: 50%;
+  z-index: 1;
+  overflow: hidden;
 }
-#branding #branding-container #branding-image-container #photo1-branding-image {
-  height: 609px;
+#branding .branding-image-container .branding-image-container ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   width: 100%;
-  background-image: url("../img/sjbcard.jpg");
-  background-position: center;
-  background-size: cover;
 }
-@media (min-width: 768px) {
-  #branding #branding-container #branding-image-container #photo1-branding-image {
-    height: 750px;
-  }
+#branding .branding-image-container .branding-image-container ul .branding-image-container li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.35s;
+  user-select: none;
 }
-#branding #branding-container #branding-text-container {
-  grid-area: branding-text;
+#branding .branding-image-container .branding-image-container ul .branding-image-container li:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+#branding .branding-image-container .branding-image-container ul .branding-image-container li.is-active {
+  opacity: 1;
+}
+#branding .branding-image-container .branding-image-container ul .branding-image-container li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 30px;
-  padding-top: 5%;
+  align-items: center;
 }
-@media (min-width: 768px) {
-  #branding #branding-container #branding-text-container {
-    padding-top: 0%;
-  }
+#branding .carousel-viewport {
+  width: calc(42% + 120px);
+  margin-left: auto;
 }
-#branding #branding-container #branding-text-container #branding-text {
-  max-width: 450px;
+#branding .carousel-viewport #branding-text {
   color: var(--black);
-}
-@media (min-width: 768px) {
-  #branding #branding-container #branding-text-container #branding-text {
-    max-width: 325px;
-    margin: 0px;
-    padding-right: 30px;
-  }
-}
-@media (min-width: 1024px) {
-  #branding #branding-container #branding-text-container #branding-text {
-    max-width: 400px;
-  }
-}
-#branding #branding-container #branding-text-container #branding-text h1 {
-  font-weight: 800;
-  font-size: 1.625rem;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) {
-  #branding #branding-container #branding-text-container #branding-text h1 {
-    font-size: 2.5rem;
-  }
-}
-#branding #branding-container #branding-text-container #branding-text h3 {
-  font-weight: 800;
-  font-size: 1.25rem;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) {
-  #branding #branding-container #branding-text-container #branding-text h3 {
-    padding-bottom: 20px;
-  }
-}
-#branding #branding-container #branding-text-container #branding-text p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.3em;
-}
-@media (min-width: 768px) {
-  #branding #branding-container #branding-text-container #branding-text p {
-    font-size: 1.25rem;
-  }
 }
 
 #poster {

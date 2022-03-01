@@ -1,100 +1,216 @@
 #branding{
-    width: 100vw;
     background-color: var(--white);
 
-    display: grid;
-    grid-template-columns: 0px auto 0px;
-    grid-template-areas: ". branding .";
-
-    #branding-container{
-        grid-area: branding;
-
-        display: grid;
-        grid-template-areas: "branding-image-1"
-                             "branding-text";
-
-        @include md{
-            grid-template-areas: "branding-image-1 branding-text";
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(1, 100%);
-
-            gap: 30px;
-        }
-
-        #branding-image-container{
+        .branding-image-container{
+            position: relative;
             grid-area: branding-image-1;
+            position: absolute;
+            //top: 0;
+            //left: 0;
+            right: 50%;
+            //bottom: 0;
+            z-index: 1;
+            overflow: hidden;
+            .branding-image-container ul{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%; 
+                
+                .branding-image-container li{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity 0.35s;
 
-            #photo1-branding-image{
-                height: 609px;
-                width: 100%;
-                background-image: url('../img/sjbcard.jpg');
-                background-position: center;
-                background-size: cover;
-    
-                @include md{
-                    height: 750px;  
+                    user-select: none;
+                }
+
+                .branding-image-container li:before{
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0; 
+                }
+
+                .branding-image-container li.is-active{
+                    opacity: 1;
+                }
+
+                .branding-image-container li img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
+
+            // img{
+            //     //height: 609px;
+            //     width: 100%;
+        
+            //         @include md{
+            //            // height: 750px;  
+            //         }
+            // }
         }
 
-        #branding-text-container{
-            grid-area: branding-text;
+        .carousel-viewport{
+            width: calc(42% + 120px);
+            margin-left: auto;
+            //height: 300px;
 
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            // padding-bottom: 30px;
+            // padding-top: 5%;
 
-            padding-bottom: 30px;
-            padding-top: 5%;
+            // .carousel-slide{
+            //     width: 100%;
 
-            @include md{
-                padding-top: 0%;
-            }
+            //     display: flex;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     align-items: baseline;
+            // }
+    
+            // h1{
+            //     font-weight: 800;
+            //     font-size: rem-calc(26);
+            //     padding-bottom: 10px;
+
+            //     @include md{
+            //         font-size: rem-calc(40); 
+            //     }
+            // }
+
+            // h3{
+            //     font-weight: 800;
+            //     font-size: rem-calc(20);
+            //     padding-bottom: 10px;
+
+            //     @include md{
+            //         padding-bottom: 20px;
+            //     }
+            // }
+            
+            // p{
+            //     font-weight: 400;
+            //     font-size: rem-calc(16); 
+            //     line-height: 1.3em;
+
+            //     @include md{
+            //         font-size: rem-calc(20); 
+            //     }
+            // }
 
             #branding-text{
-                max-width: 450px;
-                color: var(--black);
-    
-                @include md{
-                    max-width: 325px; 
-                    margin: 0px; 
-                    padding-right: 30px;
-                }
-    
-                @include lg{
-                    max-width: 400px;
-                }
-        
-                h1{
-                    font-weight: 800;
-                    font-size: rem-calc(26);
-                    padding-bottom: 10px;
-    
-                    @include md{
-                        font-size: rem-calc(40); 
-                    }
-                }
-    
-                h3{
-                    font-weight: 800;
-                    font-size: rem-calc(20);
-                    padding-bottom: 10px;
-    
-                    @include md{
-                        padding-bottom: 20px;
-                    }
-                }
-                
-                p{
-                    font-weight: 400;
-                    font-size: rem-calc(16); 
-                    line-height: 1.3em;
-    
-                    @include md{
-                        font-size: rem-calc(20); 
-                    }
-                }   
+                //max-width: 450px;
+                color: var(--black);   
             }
         }
-    }
 }
+// #branding{
+//     width: 100vw;
+//     background-color: var(--white);
+
+//     display: grid;
+//     grid-template-columns: 0px auto 0px;
+//     grid-template-areas: ". branding .";
+
+//     #branding-container{
+//         grid-area: branding;
+
+//         display: grid;
+//         grid-template-areas: "branding-image-1"
+//                              "branding-text";
+
+//         @include md{
+//             grid-template-areas: "branding-image-1 branding-text";
+//             grid-template-columns: repeat(1, 1fr);
+//             grid-template-rows: repeat(1, 100%);
+
+//             gap: 30px;
+//         }
+
+//         #branding-image-container{
+//             grid-area: branding-image-1;
+
+//             #photo1-branding-image{
+//                 height: 609px;
+//                 width: 100%;
+//                 background-image: url('../img/sjbcard.jpg');
+//                 background-position: center;
+//                 background-size: cover;
+    
+//                 @include md{
+//                     height: 750px;  
+//                 }
+//             }
+//         }
+
+//         #branding-text-container{
+//             grid-area: branding-text;
+
+//             display: flex;
+//             justify-content: center;
+//             align-items: flex-end;
+
+//             padding-bottom: 30px;
+//             padding-top: 5%;
+
+//             @include md{
+//                 padding-top: 0%;
+//             }
+
+//             #branding-text{
+//                 max-width: 450px;
+//                 color: var(--black);
+    
+//                 @include md{
+//                     max-width: 325px; 
+//                     margin: 0px; 
+//                     padding-right: 30px;
+//                 }
+    
+//                 @include lg{
+//                     max-width: 400px;
+//                 }
+        
+//                 h1{
+//                     font-weight: 800;
+//                     font-size: rem-calc(26);
+//                     padding-bottom: 10px;
+    
+//                     @include md{
+//                         font-size: rem-calc(40); 
+//                     }
+//                 }
+    
+//                 h3{
+//                     font-weight: 800;
+//                     font-size: rem-calc(20);
+//                     padding-bottom: 10px;
+    
+//                     @include md{
+//                         padding-bottom: 20px;
+//                     }
+//                 }
+                
+//                 p{
+//                     font-weight: 400;
+//                     font-size: rem-calc(16); 
+//                     line-height: 1.3em;
+    
+//                     @include md{
+//                         font-size: rem-calc(20); 
+//                     }
+//                 }   
+//             }
+//         }
+//     }
+// }
