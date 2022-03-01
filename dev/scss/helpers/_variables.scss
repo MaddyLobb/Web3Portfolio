@@ -16,8 +16,24 @@ $screen-lg-min: 1024px;
 $screen-xl-min: 1440px;
 
 // Colors
-$white: #fff;
-$black: #000;
-$red: #FF3F47;
-$yellow: #FFD400;
-$green: #938D0E;
+ $white: #fff;
+// $black: #000;
+// $red: #FF3F47;
+// $yellow: #FFD400;
+// $green: #938D0E;
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --red: #FF3F47;
+    --yellow: #FFD400;
+    --green: #938D0E; 
+}
+
+[data-theme="light"] {
+    --white: #000;
+    --black: #fff;
+    --red: #FF3F47;
+    --yellow: #FFD400;
+    --green: #938D0E; 
+}

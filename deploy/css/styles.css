@@ -10,6 +10,22 @@ html {
 /* =============
     Variables
 ============= */
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #FF3F47;
+  --yellow: #FFD400;
+  --green: #938D0E;
+}
+
+[data-theme=light] {
+  --white: #000;
+  --black: #fff;
+  --red: #FF3F47;
+  --yellow: #FFD400;
+  --green: #938D0E;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -369,6 +385,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: var(--black);
+}
+
 /* =============
     Typography
 ============= */
@@ -426,13 +446,14 @@ nav ul {
 }
 nav ul li {
   margin-left: 5vw;
+  /*Simple css to style it like a toggle switch*/
 }
 nav ul li button {
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 900;
-  color: #fff;
+  color: white;
   text-decoration: none;
   transition: 0.25s;
   cursor: pointer;
@@ -442,9 +463,6 @@ nav ul li button {
   nav ul li button {
     font-size: 18px;
   }
-}
-.about-btn nav ul li:hover {
-  color: #FFD400;
 }
 
 /* =============
@@ -518,7 +536,6 @@ header {
 #about {
   height: 100vh;
   width: 100vw;
-  background-color: black;
   display: grid;
   grid-template-columns: 30px auto 30px;
   grid-template-areas: ". about .";
@@ -598,12 +615,11 @@ header {
   }
 }
 #about #about-text-container #about-text p {
-  color: white;
+  color: var(--white);
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   padding-bottom: 1em;
-  background-color: black;
 }
 @media (min-width: 768px) {
   #about #about-text-container #about-text p {
@@ -612,7 +628,6 @@ header {
 }
 
 #photography {
-  background-color: black;
   width: 100vw;
   display: grid;
   grid-template-columns: 30px auto 30px;
@@ -684,6 +699,7 @@ header {
 }
 #photography #photography-container #photography-text-container {
   grid-area: photography-text;
+  color: var(--white);
   display: flex;
   justify-content: center;
 }
@@ -703,7 +719,6 @@ header {
 #photography #photography-container #photography-text-container #photography-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
-  color: white;
   padding-top: 5%;
 }
 @media (min-width: 768px) {
@@ -716,7 +731,6 @@ header {
 #photography #photography-container #photography-text-container #photography-text p {
   font-weight: 400;
   font-size: 1rem;
-  color: white;
   padding-bottom: 5%;
   line-height: 1.3em;
 }
@@ -728,6 +742,7 @@ header {
 
 #branding {
   width: 100vw;
+  background-color: var(--white);
   display: grid;
   grid-template-columns: 0px auto 0px;
   grid-template-areas: ". branding .";
@@ -775,6 +790,7 @@ header {
 }
 #branding #branding-container #branding-text-container #branding-text {
   max-width: 450px;
+  color: var(--black);
 }
 @media (min-width: 768px) {
   #branding #branding-container #branding-text-container #branding-text {
@@ -820,7 +836,6 @@ header {
 }
 
 #poster {
-  background-color: black;
   width: 100vw;
   display: grid;
   grid-template-columns: 30px auto 30px;
@@ -871,6 +886,7 @@ header {
 }
 #poster #poster-container #poster-text-container {
   grid-area: poster-text;
+  color: var(--white);
   display: flex;
   justify-content: center;
 }
@@ -890,7 +906,6 @@ header {
 #poster #poster-container #poster-text-container #poster-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
-  color: white;
   padding-top: 5%;
 }
 @media (min-width: 768px) {
@@ -903,7 +918,6 @@ header {
 #poster #poster-container #poster-text-container #poster-text p {
   font-weight: 400;
   font-size: 1rem;
-  color: white;
   padding-bottom: 5%;
   line-height: 1.3em;
 }
@@ -915,6 +929,7 @@ header {
 
 #publication {
   width: 100vw;
+  background-color: var(--white);
   display: grid;
   grid-template-columns: 0px auto 0px;
   grid-template-areas: ". publication .";
@@ -962,6 +977,7 @@ header {
 }
 #publication #publication-container #publication-text-container #publication-text {
   max-width: 450px;
+  color: var(--black);
 }
 @media (min-width: 768px) {
   #publication #publication-container #publication-text-container #publication-text {
@@ -1008,7 +1024,6 @@ header {
 #contact {
   height: 100vh;
   width: 100vw;
-  background-color: black;
   display: grid;
   grid-template-columns: 30px auto 30px;
   grid-template-areas: ". contact .";
@@ -1062,13 +1077,13 @@ header {
   font-family: "Sonder-Medium", serif;
   font-size: 1.625rem;
   text-align: center;
-  color: white;
+  color: var(--white);
 }
 #contact #contact-container #contact-form-container #contact-form h2 {
   font-family: "Sonder-Medium", serif;
   font-size: 1.25rem;
   text-align: center;
-  color: white;
+  color: var(--white);
 }
 #contact #contact-container #contact-form-container #contact-form form input, #contact #contact-container #contact-form-container #contact-form form textarea {
   border: 0px;
@@ -1078,10 +1093,10 @@ header {
   padding: 1em;
   width: 100%;
   height: 100%;
+  background: var(--white);
 }
 #contact #contact-container #contact-form-container #contact-form form #first-name {
   width: 40%;
-  color: black;
 }
 #contact #contact-container #contact-form-container #contact-form form #last-name {
   width: 40%;
@@ -1094,6 +1109,68 @@ header {
   width: 92%;
 }
 #contact #contact-container #contact-form-container #contact-form form #submit {
-  background: white;
-  color: black;
+  background: var --white;
+  color: var(--black);
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  left: 0px;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: var(--white);
+  font-family: "Open Sans", sans-serif;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--black);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: var(--white);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--white);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: var(--black);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
