@@ -434,19 +434,64 @@ textarea {
     Navigation
 ============= */
 nav {
-  height: 50px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  nav {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+nav #burger-container {
+  justify-content: flex-end;
+  display: flex;
+  padding: 30px;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  nav #burger-container {
+    display: none;
+  }
+}
+nav #burger-container #burger {
+  z-index: 30;
+  height: 40px;
+  width: 40px;
 }
 nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
 nav ul li {
-  margin-left: 5vw;
-  /*Simple css to style it like a toggle switch*/
+  display: flex;
+  flex-basis: calc(100% - 0px);
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  nav ul li {
+    margin-left: 5vw;
+  }
 }
 nav ul li button {
   background-color: transparent;
@@ -463,6 +508,15 @@ nav ul li button {
   nav ul li button {
     font-size: 18px;
   }
+}
+nav ul #mobile-about-box {
+  background-color: var(--black);
+}
+nav ul #mobile-projects-box {
+  background-color: var(--black);
+}
+nav ul #mobile-contact-box {
+  background-color: var(--black);
 }
 
 /* =============
@@ -1040,7 +1094,6 @@ header {
   grid-area: contact;
   display: grid;
   grid-template-areas: "contact-svg-1" "contact-form-1";
-  gap: 10px;
 }
 @media (min-width: 768px) {
   #contact #contact-container {
@@ -1098,9 +1151,24 @@ header {
 #contact #contact-container #contact-form-container #contact-form form #first-name {
   width: 40%;
 }
+@media (min-width: 768px) {
+  #contact #contact-container #contact-form-container #contact-form form #first-name {
+    width: 38%;
+  }
+}
+@media (min-width: 1024px) {
+  #contact #contact-container #contact-form-container #contact-form form #first-name {
+    width: 40%;
+  }
+}
 #contact #contact-container #contact-form-container #contact-form form #last-name {
   width: 40%;
   float: right;
+}
+@media (min-width: 768px) {
+  #contact #contact-container #contact-form-container #contact-form form #last-name {
+    width: 40%;
+  }
 }
 #contact #contact-container #contact-form-container #contact-form form #email {
   width: 92%;

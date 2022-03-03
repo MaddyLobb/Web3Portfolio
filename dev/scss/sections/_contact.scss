@@ -20,7 +20,7 @@
         display: grid;
         grid-template-areas: "contact-svg-1"
                              "contact-form-1";
-        gap: 10px;
+        // gap: 10px;
 
         @include md{
             grid-template-areas: ". contact-svg-1"
@@ -108,11 +108,23 @@
 
                     #first-name{
                         width: 40%;
+
+                        @include md{
+                            width: 38%;
+                        }
+
+                        @include lg{
+                            width: 40%;
+                        }
                     }
                 
                     #last-name{
                         width: 40%;
                         float: right;
+
+                        @include md{
+                            width: 40%;
+                        }
                     }
 
                     #email{
