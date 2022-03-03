@@ -1,33 +1,30 @@
 <header>
-    <div id="header">
-        <section>
-            <nav>
-                <div>
-                    <section id="burger-container">
-                        <div id="burger">
-                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 16">
-                                <g stroke="#FFF" stroke-linecap="round">
-                                  <path id="top" class="lines" d="M1 1h33"/>
-                                  <path id="middle" class="lines" d="M1.5 8.5h33"/>
-                                  <path id="bottom" class="lines" d="M1.5 15.5h33"/>
-                                </g>
-                              </svg>
-                        </div>
-                    </section>
-                </div>
-                <ul class="full-mobile-nav">
-                    <li id="mobile-about-box" class="mobile-nav-container"><button class="nav-btn">ABOUT</button></li>
-                    <li id="mobile-projects-box" class="mobile-nav-container"><button class="nav-btn">PROJECTS</button></li>
-                    <li id="mobile-contact-box" class="mobile-nav-container"><button class="nav-btn">CONTACT</button></li>
-                </ul>
-                <section class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                  </label>
-                  <em>Enable Light Mode!</em>
-                </section>
-            </nav>
+    <div id="full-nav">
+        <section id="burger-container">
+            <div id="burger">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 16">
+                    <g stroke="#FFF" stroke-linecap="round">
+                        <path id="top" class="lines" d="M1 1h33"/>
+                        <path id="middle" class="lines" d="M1.5 8.5h33"/>
+                        <path id="bottom" class="lines" d="M1.5 15.5h33"/>
+                    </g>
+                </svg>
+            </div>
+        </section>
+        <nav id="mobile-nav-container">
+            <ul class="full-mobile-nav">
+                <li id="mobile-about-box" class="mobile-nav"><button class="nav-btn">ABOUT</button></li>
+                <li id="mobile-projects-box" class="mobile-nav"><button class="nav-btn">PROJECTS</button></li>
+                <li id="mobile-contact-box" class="mobile-nav"><button class="nav-btn">CONTACT</button></li>
+            </ul>
+        </nav>
+
+        <section class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Light Mode!</em>
         </section>
     </div>
 </header>
