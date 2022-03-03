@@ -11,7 +11,8 @@ bottomTL.to("#bottom",{duration:0.25, y:"-=8"})
         .to("#bottom",{duration:0.25, rotation:-45});
 
 const middleTL = new gsap.timeline();
-middleTL.to("#middle",{duration:0.25, scale:0});
+middleTL.to("#middle",{duration:0.25, scale:0})
+        .to("#burger", {duration: 0.25, stroke:000});
 
 export const burgerTL = new gsap.timeline({paused:true});
 

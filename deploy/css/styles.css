@@ -498,7 +498,7 @@ nav ul li button {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 900;
-  color: white;
+  color: var(--black);
   text-decoration: none;
   transition: 0.25s;
   cursor: pointer;
@@ -510,13 +510,13 @@ nav ul li button {
   }
 }
 nav ul #mobile-about-box {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 nav ul #mobile-projects-box {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 nav ul #mobile-contact-box {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 /* =============

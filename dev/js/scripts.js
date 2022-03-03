@@ -11,18 +11,16 @@ function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
         mobileMenuEnter.play();
-        //mobileNavAnimationTL.reverse();
         canISeeMenu = true;
     }else{
         burgerTL.reverse();
         mobileMenuEnter.reverse();
-        //mobileNavAnimationTL.play();
         canISeeMenu = false;
     }
 }
 
 burgerButton.addEventListener("click", openCloseMenu);
-let mobileNavButtons = document.querySelectorAll(".mobile-main-title");
+let mobileNavButtons = document.querySelectorAll(".nav-btn");
 
 for (const button of mobileNavButtons){
     button.addEventListener("click", checkScrolling);

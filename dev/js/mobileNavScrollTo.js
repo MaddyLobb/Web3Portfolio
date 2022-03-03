@@ -3,8 +3,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-let idArray = ["#mobile-about-box","#mobile-projects-box","#mobile-contact-box"];
+let idArray = ["#about","#projects","#contact"];
 
 export function mobileScrollPage(index){
-    gsap.to(window, {duration: 2, scrollTo:idArray[index]});
+    gsap.to(window, {duration: 1.5, scrollTo:idArray[index]});
 }
