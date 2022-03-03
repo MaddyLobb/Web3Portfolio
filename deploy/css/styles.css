@@ -698,7 +698,7 @@ header #full-nav #mobile-nav-container {
 @media (min-width: 768px) {
   #photography {
     grid-template-columns: 10% auto 10%;
-    padding-top: 0%;
+    padding-top: 20%;
   }
 }
 #photography #photography-container {
