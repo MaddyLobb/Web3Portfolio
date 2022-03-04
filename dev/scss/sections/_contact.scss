@@ -78,7 +78,10 @@
 
             #contact-form{
                 grid-area: contact-form-2;
-                max-width: 400px;
+
+                @include md{
+                    max-width: 400px;
+                }
 
                 h1{
                     font-family: 'Sonder-Medium', serif;
@@ -107,7 +110,7 @@
                     }
 
                     #first-name{
-                        width: 40%;
+                        width: 92%;
 
                         @include md{
                             width: 38%;
@@ -119,8 +122,8 @@
                     }
                 
                     #last-name{
-                        width: 40%;
-                        float: right;
+                        width: 92%;
+                        //float: right;
 
                         @include md{
                             width: 40%;

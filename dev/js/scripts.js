@@ -1,4 +1,5 @@
-import { burgerTL } from "./burgerAnimation"
+import { Fancybox } from "@fancyapps/ui";
+import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";

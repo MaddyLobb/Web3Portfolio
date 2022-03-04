@@ -541,13 +541,18 @@ header #full-nav #mobile-nav-container {
 footer {
   height: 100%;
   width: 100vw;
-  background-color: var(--red);
+  background-image: url("../img/Hero.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 footer h1 {
-  margin: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
 }
 
 #hero {
@@ -1141,7 +1146,11 @@ footer h1 {
 }
 #contact #contact-container #contact-form-container #contact-form {
   grid-area: contact-form-2;
-  max-width: 400px;
+}
+@media (min-width: 768px) {
+  #contact #contact-container #contact-form-container #contact-form {
+    max-width: 400px;
+  }
 }
 #contact #contact-container #contact-form-container #contact-form h1 {
   font-family: "Sonder-Medium", serif;
@@ -1166,7 +1175,7 @@ footer h1 {
   background: var(--white);
 }
 #contact #contact-container #contact-form-container #contact-form form #first-name {
-  width: 40%;
+  width: 92%;
 }
 @media (min-width: 768px) {
   #contact #contact-container #contact-form-container #contact-form form #first-name {
@@ -1179,8 +1188,7 @@ footer h1 {
   }
 }
 #contact #contact-container #contact-form-container #contact-form form #last-name {
-  width: 40%;
-  float: right;
+  width: 92%;
 }
 @media (min-width: 768px) {
   #contact #contact-container #contact-form-container #contact-form form #last-name {

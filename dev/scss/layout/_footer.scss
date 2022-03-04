@@ -4,13 +4,18 @@
 footer{
     height: 100%;
     width: 100vw;
-    background-color: var(--red);
+    background-image: url("../img/Hero.jpg");
+    background-position: center;
+    background-size: cover;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1{
-        margin: 40px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px;
     }
 }
