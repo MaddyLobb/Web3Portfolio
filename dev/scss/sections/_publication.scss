@@ -164,18 +164,99 @@
         #publication-image-container{
             grid-area: publication-image-1;
 
-            #photo1-publication-image{
-                height: 609px;
+            ul{
+                height: 100%;
                 width: 100%;
-                background-image: url('../img/Inspirecover.jpg');
-                background-position: center;
-                background-size: cover;
+                overflow: hidden;
+                // background-image: url('../img/Inspirecover.jpg');
+                // background-position: center;
+                // background-size: cover;
     
                 @include md{
                     height: 750px;  
                 }
+
+                li {
+                    background-position: center;
+                    background-size: cover;
+    
+                    a:link,a:visited{
+                        height: 609px;
+                        width: 100%;
+                        display: inline-block;
+
+                        @include md{
+                            height: 750px;  
+                        }
+
+                        #publication-1{
+                            background-image: url('../img/Inspirecover.jpg');
+                            background-position: center;
+                            background-size: cover;
+                        }
+
+                        #publication-2{
+                            background-image: url('../img/Inspirecover.jpg');
+                            display: hidden;
+    
+                        }
+
+                        #publication-3{
+                            background-image: url('../img/inspirelast.jpg');
+                            display: hidden;
+    
+                        }
+                    }
+                }
+            }
+
+            #publication-1{
+                background-image: url('../img/Inspirecover.jpg');
+                background-position: center;
+                background-size: cover;
             }
         }
+
+        // #publication-image-container{
+        //     grid-area: publication-image-1;
+
+        //     #photo1-publication-image{
+        //         height: 609px;
+        //         width: 100%;
+        //         // background-image: url('../img/Inspirecover.jpg');
+        //         // background-position: center;
+        //         // background-size: cover;
+    
+        //         @include md{
+        //             height: 750px;  
+        //         }
+
+        //         li {
+        //             background-position: center;
+        //             background-size: cover;
+        //             //margin: 0;
+    
+        //             a:link,a:visited{
+        //                 height: 100%;
+        //                 width: 100%;
+        //                 display: inline-block;
+        //             }
+        //         }
+
+                
+
+        //         // #publication-2{
+        //         //     background-image: url('../img/Inspirecover.jpg');
+    
+        //         // }
+        //     }
+
+        //     #publication-1{
+        //         background-image: url('../img/Inspirecover.jpg');
+        //         background-position: center;
+        //         background-size: cover;
+        //     }
+        // }
 
         #publication-text-container{
             grid-area: publication-text;

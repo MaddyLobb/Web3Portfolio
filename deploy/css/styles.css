@@ -1027,17 +1027,47 @@ footer h1 {
 #publication #publication-container #publication-image-container {
   grid-area: publication-image-1;
 }
-#publication #publication-container #publication-image-container #photo1-publication-image {
+#publication #publication-container #publication-image-container ul {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-image-container ul {
+    height: 750px;
+  }
+}
+#publication #publication-container #publication-image-container ul li {
+  background-position: center;
+  background-size: cover;
+}
+#publication #publication-container #publication-image-container ul li a:link, #publication #publication-container #publication-image-container ul li a:visited {
   height: 609px;
   width: 100%;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  #publication #publication-container #publication-image-container ul li a:link, #publication #publication-container #publication-image-container ul li a:visited {
+    height: 750px;
+  }
+}
+#publication #publication-container #publication-image-container ul li a:link #publication-1, #publication #publication-container #publication-image-container ul li a:visited #publication-1 {
   background-image: url("../img/Inspirecover.jpg");
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) {
-  #publication #publication-container #publication-image-container #photo1-publication-image {
-    height: 750px;
-  }
+#publication #publication-container #publication-image-container ul li a:link #publication-2, #publication #publication-container #publication-image-container ul li a:visited #publication-2 {
+  background-image: url("../img/Inspirecover.jpg");
+  display: hidden;
+}
+#publication #publication-container #publication-image-container ul li a:link #publication-3, #publication #publication-container #publication-image-container ul li a:visited #publication-3 {
+  background-image: url("../img/inspirelast.jpg");
+  display: hidden;
+}
+#publication #publication-container #publication-image-container #publication-1 {
+  background-image: url("../img/Inspirecover.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #publication #publication-container #publication-text-container {
   grid-area: publication-text;
