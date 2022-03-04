@@ -560,55 +560,49 @@ footer h1 {
   background-position: center;
   background-size: cover;
 }
-#hero #hero-text {
+#hero #hero-text-container {
   background-color: rgba(0, 0, 0, 0.1);
 }
-#hero #hero-text h1 {
+#hero #hero-text-container #hero-text h1 {
   color: white;
   font-family: "Sonder-Medium", serif;
   font-size: 6.25rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #hero #hero-text h1 {
+  #hero #hero-text-container #hero-text h1 {
     font-size: 12.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #hero #hero-text h1 {
+  #hero #hero-text-container #hero-text h1 {
     font-size: 15.625rem;
   }
 }
 @media (min-width: 1440px) {
-  #hero #hero-text h1 {
+  #hero #hero-text-container #hero-text h1 {
     font-size: 18.75rem;
   }
 }
-#hero #hero-text h3 {
+#hero #hero-text-container #hero-text h3 {
   color: white;
   font-size: 2.1875rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #hero #hero-text h3 {
+  #hero #hero-text-container #hero-text h3 {
     font-size: 2.8125rem;
   }
 }
 @media (min-width: 1024px) {
-  #hero #hero-text h3 {
+  #hero #hero-text-container #hero-text h3 {
     font-size: 3.125rem;
   }
 }
 @media (min-width: 1440px) {
-  #hero #hero-text h3 {
+  #hero #hero-text-container #hero-text h3 {
     font-size: 3.75rem;
   }
-}
-#hero #hero-svg-container {
-  height: 100%;
-  width: 100%;
-  margin-top: 0px;
-  position: absolute;
 }
 
 #about {

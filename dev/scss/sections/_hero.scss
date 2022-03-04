@@ -1,6 +1,7 @@
 #hero {
    height: 100vh;
    width: 100vw;
+
    display: flex;
    justify-content: center;
    align-items: center;
@@ -10,59 +11,73 @@
    background-size: cover;
    
 
-   #hero-text{
+   #hero-text-container{
       background-color: rgba(0, 0, 0, 0.1);
 
-      h1{
-         color: white;
-         font-family: 'Sonder-Medium', serif;
-         font-size: rem-calc(100);
-         text-align: center;
-   
-         @include md{
-            font-size: rem-calc(200); 
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+
+
+      //position: relative;
+
+      #hero-text{
+         //position: absolute;
+         h1{
+            color: white;
+            font-family: 'Sonder-Medium', serif;
+            font-size: rem-calc(100);
+            text-align: center;
+      
+            @include md{
+               font-size: rem-calc(200); 
+            }
+      
+            @include lg{
+               font-size: rem-calc(250); 
+            }
+      
+            @include xl{
+               font-size: rem-calc(300); 
+            }
          }
-   
-         @include lg{
-            font-size: rem-calc(250); 
-         }
-   
-         @include xl{
-            font-size: rem-calc(300); 
+      
+         h3{
+            color: white;
+            font-size: rem-calc(35);
+            text-align: center;
+      
+            @include md{
+               font-size: rem-calc(45); 
+            }
+      
+            @include lg{
+               font-size: rem-calc(50); 
+            }
+      
+            @include xl{
+               font-size: rem-calc(60); 
+            }
          }
       }
-   
-      h3{
-         color: white;
-         font-size: rem-calc(35);
-         text-align: center;
-   
-         @include md{
-            font-size: rem-calc(45); 
-         }
-   
-         @include lg{
-            font-size: rem-calc(50); 
-         }
-   
-         @include xl{
-            font-size: rem-calc(60); 
-         }
-      }
-   }
-
-   #hero-svg-container{
-      height: 100%;
-      width: 100%;
-      margin-top: 0px;
-      position: absolute;
-
-      // #hero-background-line{
-      //    height: 50px;
-      // }
-
 
    }
+
+   // #hero-svg-container{
+   //    height: 100%;
+   //    width: 100%;
+   //    position: relative;
+   //    position: absolute;
+
+   //    #hero-svg{
+   //       // height: 50px;
+   //       //grid-area: svg;
+   //       margin-top: 100px;
+   //       margin-right: 150px;
+   //    }
+
+
+   // }
 
    // #hero-svg-2{
    //    position: relative;
@@ -71,5 +86,5 @@
    //       position: absolute;
    //    }
       
-   // }
+   //}
 }
