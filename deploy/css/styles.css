@@ -553,6 +553,9 @@ footer h1 {
 #hero {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../img/hero.jpg");
   background-position: center;
   background-size: cover;
@@ -602,13 +605,9 @@ footer h1 {
   }
 }
 #hero #hero-svg-container {
-  height: 50%;
-  width: 50%;
-  z-index: 3000;
-  position: relative;
-  border: 5px red solid;
-}
-#hero #hero-svg-container #hero-svg {
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
   position: absolute;
 }
 

@@ -1,13 +1,14 @@
 #hero {
    height: 100vh;
    width: 100vw;
-   // display: flex;
-   // justify-content: center;
-   // align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
    background-image: url('../img/hero.jpg');
    background-position: center;
    background-size: cover;
+   
 
    #hero-text{
       background-color: rgba(0, 0, 0, 0.1);
@@ -51,15 +52,24 @@
    }
 
    #hero-svg-container{
-      height: 50%;
-      width: 50%;
-      z-index: 3000;
-      position: relative;
-      border: 5px red solid;
-      
+      height: 100%;
+      width: 100%;
+      margin-top: 0px;
+      position: absolute;
 
-      #hero-svg{
-         position: absolute;
-      }
+      // #hero-background-line{
+      //    height: 50px;
+      // }
+
+
    }
+
+   // #hero-svg-2{
+   //    position: relative;
+   
+   //    #hero-svg-svg{
+   //       position: absolute;
+   //    }
+      
+   // }
 }
