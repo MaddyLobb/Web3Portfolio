@@ -1,15 +1,15 @@
 #hero {
    height: 100vh;
    width: 100vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   // display: flex;
+   // justify-content: center;
+   // align-items: center;
 
    background-image: url('../img/hero.jpg');
    background-position: center;
    background-size: cover;
 
-   div{
+   #hero-text{
       background-color: rgba(0, 0, 0, 0.1);
 
       h1{
@@ -47,6 +47,19 @@
          @include xl{
             font-size: rem-calc(60); 
          }
+      }
+   }
+
+   #hero-svg-container{
+      height: 50%;
+      width: 50%;
+      z-index: 3000;
+      position: relative;
+      border: 5px red solid;
+      
+
+      #hero-svg{
+         position: absolute;
       }
    }
 }
