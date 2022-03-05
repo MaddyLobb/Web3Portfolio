@@ -8,16 +8,18 @@ header {
     width: 100%;
     z-index: 10;
 
+        background-color: rgba(0, 0, 0, 0.4);
+
     #full-nav {
         display: grid;
         grid-template-areas: 
-        ". burger"
+        "toggle burger"
         "nav nav";
-        grid-template-columns: 20% auto;
+        grid-template-columns: 40% auto;
 
         @include md {
-            grid-template-areas: "nav";
-            grid-template-columns:  auto ;
+            grid-template-areas: "toggle nav";
+            grid-template-columns: 20% auto;
         }
 
         #burger-container {
@@ -48,11 +50,14 @@ header {
             z-index: 50;
 
             @include md {
-                background-color: rgba(0, 0, 0, 0.4);
                 position: static;
                 height: 50px;
                 width: 100%;
             }
+        }
+
+        .theme-switch-wrapper{
+            grid-area: toggle;
         }
     }
 }

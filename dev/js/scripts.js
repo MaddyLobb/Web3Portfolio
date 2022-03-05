@@ -6,6 +6,7 @@ import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 
 var burgerButton = document.querySelector("#burger");
+// burgerButton.classList.toggle('hide');
 
 var canISeeMenu = false;
 

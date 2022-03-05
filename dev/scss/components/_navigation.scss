@@ -8,11 +8,17 @@
     justify-content: center;
     align-items: center;
 
+    @include md {
+        height: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+
     ul {
         @include md {
             height: 100%;
             display: flex;
-            justify-content: center;
         }
 
         li {

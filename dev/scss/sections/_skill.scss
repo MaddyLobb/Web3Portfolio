@@ -1,0 +1,98 @@
+#skills{
+    height: 70vh;
+
+    // background-color: var(--red);
+    position: relative;
+    z-index: 1;
+
+    background: linear-gradient(-45deg, #FF3F47 30%, #FFD400, #938D0E);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    &:before, &:after {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+
+    &:before {
+        top: 0;
+        transform: skewY(1.5deg);
+        transform-origin: 100% 0;
+    }
+      
+      &:after {
+        bottom: 0;
+        transform: skewY(-1.5deg);
+        transform-origin: 100%;
+    }
+
+    #skills-container{
+        height: 100%;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #skills-text{
+
+            h1{
+                font-family: 'Sonder-Medium', serif;
+                font-size: rem-calc(60);
+                letter-spacing: 5px;
+
+                @include md{
+                    font-size: rem-calc(80);
+                }
+
+                @include lg{
+                    font-size: rem-calc(100);
+                }
+            }
+
+            ul {
+                //list-style-type: none;
+            }
+
+            li{
+                font-size: rem-calc(25);
+                line-height: 40px;
+
+                @include md{
+                    font-size: rem-calc(30);
+                    line-height: 60px;
+                }
+
+                @include lg{
+                    font-size: rem-calc(40);
+                    line-height: 70px;
+                }
+            }
+              
+            ul li:before {
+                content: '\2014';
+                margin-right: 10px;
+    
+            }
+        }
+    }
+    
+}    
