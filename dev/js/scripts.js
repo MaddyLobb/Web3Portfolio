@@ -1,4 +1,5 @@
 import { Fancybox } from "@fancyapps/ui";
+import { Carousel } from "@fancyapps/ui";
 import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
@@ -39,6 +40,27 @@ function checkScrolling(e) {
 window.addEventListener('resize', displayWindowSizeMobile);
 
 window.addEventListener('load', displayWindowSizeMobile);
+
+// let projectsCarousel = document.querySelectorAll(".carousel");
+
+window.addEventListener('load', function(){
+    const myCarousel = new Carousel(document.querySelector(".carousel"),{
+        'center': false,
+        slidesPerPage: 1,
+    });
+});
+
+Fancybox.bind('[data-fancybox="inspire"]', {
+    Carousel: {
+      on: {
+        change: (that) => {
+          myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+            friction: 0,
+          });
+        },
+      },
+    },
+  });
 
 
 //lightmode//
