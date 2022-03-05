@@ -536,6 +536,7 @@ header #full-nav #mobile-nav-container {
 }
 @media (min-width: 768px) {
   header #full-nav #mobile-nav-container {
+    background-color: transparent;
     position: static;
     height: 50px;
     width: 100%;
@@ -805,12 +806,13 @@ footer h1 {
 }
 @media (min-width: 768px) {
   #photography {
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 5% auto 5%;
     padding-top: 20%;
   }
 }
 #photography #photography-container {
   grid-area: photography;
+  overflow: hidden;
   display: grid;
   grid-template-areas: "project-svg" "photography-images" "photography-text";
   gap: 10px;
@@ -849,21 +851,59 @@ footer h1 {
 }
 #photography #photography-container #photography-image-container {
   grid-area: photography-images;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-#photography #photography-container #photography-image-container #photo1-photography-image {
-  height: 609px;
-  width: 359px;
-  background-image: url("../img/Photo1.jpg");
+#photography #photography-container #photography-image-container ul {
+  grid-area: images;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #photography #photography-container #photography-image-container ul {
+    height: 750px;
+  }
+}
+#photography #photography-container #photography-image-container ul li {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 1024px) {
-  #photography #photography-container #photography-image-container #photo1-photography-image {
+#photography #photography-container #photography-image-container ul li a:link, #photography #photography-container #photography-image-container ul li a:visited {
+  height: 609px;
+  width: 359px;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  #photography #photography-container #photography-image-container ul li a:link, #photography #photography-container #photography-image-container ul li a:visited {
     height: 750px;
     width: 458px;
   }
+}
+#photography #photography-container #photography-image-container .carousel-1 {
+  height: 609px;
+  width: 359px;
+}
+@media (min-width: 768px) {
+  #photography #photography-container #photography-image-container .carousel-1 {
+    height: 750px;
+    width: 458px;
+  }
+}
+#photography #photography-container #photography-image-container .carousel-1 .carousel__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  width: 100%;
+  height: 100%;
+}
+#photography #photography-container #photography-image-container .carousel-1 .carousel__dots {
+  color: var(--white);
+  margin-top: 10px;
+  z-index: 20;
+  position: static;
 }
 #photography #photography-container #photography-text-container {
   grid-area: photography-text;
@@ -906,6 +946,30 @@ footer h1 {
   #photography #photography-container #photography-text-container #photography-text p {
     font-size: 1.25rem;
   }
+}
+#photography #photo-1 {
+  background-image: url("../img/Photo1.jpg");
+}
+#photography #photo-2 {
+  background-image: url("../img/photo-2.jpg");
+}
+#photography #photo-3 {
+  background-image: url("../img/photo-3.jpg");
+}
+#photography #photo-4 {
+  background-image: url("../img/photo-4.jpg");
+}
+#photography #photo-5 {
+  background-image: url("../img/photo-5.jpg");
+}
+#photography #photo-6 {
+  background-image: url("../img/photo-6.jpg");
+}
+#photography #photo-7 {
+  background-image: url("../img/photo-7.jpg");
+}
+#photography #photo-8 {
+  background-image: url("../img/photo-8.jpg");
 }
 
 #branding {

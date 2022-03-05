@@ -1,9 +1,8 @@
-import { Fancybox } from "@fancyapps/ui";
-import { Carousel } from "@fancyapps/ui";
 import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
+import { photographyCarousel } from "./carousel";
 
 var burgerButton = document.querySelector("#burger");
 // burgerButton.classList.toggle('hide');
@@ -38,68 +37,6 @@ function checkScrolling(e) {
     }
 }
 
-window.addEventListener('resize', displayWindowSizeMobile);
-
-window.addEventListener('load', displayWindowSizeMobile);
-
-// let projectsCarousel = document.querySelectorAll(".carousel");
-
-window.addEventListener('load', function(){
-    // const myCarousel = new Carousel(document.querySelector(".carousel"),{
-    //     'center': false,
-    //     slidesPerPage: 1,
-    // });
-
-
-    // Initialise Carousel
-    const myCarousel = new Carousel(document.querySelector(".carousel"), {
-    'center': false,
-    slidesPerPage: 1,
-    on: {
-      change: (carousel, to) => {
-        // Clear active elements
-        document
-          .querySelectorAll(".carousel .is-active")
-          .forEach((el) => {
-            el.classList.remove("is-active");
-          });
-  
-        // Mark current elements as active
-        document
-          .querySelectorAll(
-            `.carousel [data-for="${to}"]`
-          )
-          .forEach((el) => {
-            el.classList.add("is-active");
-          });
-      },
-    },
-});
-  
-  // Make links clickable
-//   document.getElementById("logoBar").addEventListener("click", (event) => {
-//     const index = event.target.dataset.for || -1;
-  
-//     if (index > -1) {
-//       event.preventDefault();
-//       logoCarousel.slideTo(index);
-//     }
-//   });
-});
-
-Fancybox.bind('[data-fancybox="inspire"]', {
-    Carousel: {
-      on: {
-        change: (that) => {
-          myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-            friction: 0,
-          });
-        },
-      },
-    },
-  });
-
-
 //lightmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
@@ -131,3 +68,9 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
+
+window.addEventListener('resize', displayWindowSizeMobile);
+
+window.addEventListener('load', displayWindowSizeMobile);
+
+window.addEventListener('load', photographyCarousel);

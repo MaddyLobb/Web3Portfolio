@@ -9,12 +9,18 @@
     padding-bottom: 5%;
 
     @include md{
-        grid-template-columns: 10% auto 10%;  
+        grid-template-columns: 5% auto 5%;  
         padding-top: 20%;
     }
 
+    // @include md{
+    //     grid-template-columns: 10% auto 10%;  
+    //     padding-top: 20%;
+    // }
+
     #photography-container{
         grid-area: photography;
+        overflow: hidden;
 
         display: grid;
         grid-template-areas: "project-svg"
@@ -61,21 +67,68 @@
         #photography-image-container{
             grid-area: photography-images;
 
+            height: 100%;
+            width: 100%;
+
+
             display: flex;
             justify-content: center;
 
-            #photo1-photography-image{
-                height: 609px;
-                width: 359px;
-                background-image: url('../img/Photo1.jpg');
-                background-position: center;
-                background-size: cover;
+            ul{
+                grid-area: images;
+                height: 100%;
+                width: 100%;
     
-                @include lg{
-                    height: 750px;
-                    width: 458px;
+                @include md{
+                    height: 750px;  
+                }
+
+                li {
+                    background-position: center;
+                    background-size: cover;
+    
+                    a:link,a:visited{
+                        height: 609px;
+                        width: 359px;
+                        display: inline-block;
+
+                        @include md{
+                            height: 750px; 
+                            width: 458px; 
+                        }
+
+                    }
                 }
             }
+
+            .carousel-1 {
+                height: 609px;
+                width: 359px;
+
+                @include md{
+                    height: 750px;
+                    width: 458px;  
+                }
+
+                .carousel__slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 0rem;
+                  
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .carousel__dots {
+                    color: var(--white);
+                    margin-top: 10px;
+                    z-index: 20;
+                    position: static;
+                }
+            }
+
         }
 
         #photography-text-container{
@@ -121,5 +174,30 @@
                 }
             }
         }
+    }
+
+    #photo-1{
+        background-image: url('../img/Photo1.jpg');
+    }
+    #photo-2{
+        background-image: url('../img/photo-2.jpg');
+    }
+    #photo-3{
+        background-image: url('../img/photo-3.jpg');
+    }
+    #photo-4{
+        background-image: url('../img/photo-4.jpg');
+    }
+    #photo-5{
+        background-image: url('../img/photo-5.jpg');
+    }
+    #photo-6{
+        background-image: url('../img/photo-6.jpg');
+    }
+    #photo-7{
+        background-image: url('../img/photo-7.jpg');
+    }
+    #photo-8{
+        background-image: url('../img/photo-8.jpg');
     }
 }
