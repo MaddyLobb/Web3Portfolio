@@ -44,10 +44,45 @@ window.addEventListener('load', displayWindowSizeMobile);
 // let projectsCarousel = document.querySelectorAll(".carousel");
 
 window.addEventListener('load', function(){
-    const myCarousel = new Carousel(document.querySelector(".carousel"),{
-        'center': false,
-        slidesPerPage: 1,
-    });
+    // const myCarousel = new Carousel(document.querySelector(".carousel"),{
+    //     'center': false,
+    //     slidesPerPage: 1,
+    // });
+    // Initialise Carousel
+const myCarousel = new Carousel(document.querySelector(".carousel"), {
+    //Dots: false,
+    'center': false,
+    slidesPerPage: 1,
+    on: {
+      change: (carousel, to) => {
+        // Clear active elements
+        document
+          .querySelectorAll(".carousel .is-active")
+          .forEach((el) => {
+            el.classList.remove("is-active");
+          });
+  
+        // Mark current elements as active
+        document
+          .querySelectorAll(
+            `.carousel [data-for="${to}"]`
+          )
+          .forEach((el) => {
+            el.classList.add("is-active");
+          });
+      },
+    },
+  });
+  
+  // Make links clickable
+//   document.getElementById("logoBar").addEventListener("click", (event) => {
+//     const index = event.target.dataset.for || -1;
+  
+//     if (index > -1) {
+//       event.preventDefault();
+//       logoCarousel.slideTo(index);
+//     }
+//   });
 });
 
 Fancybox.bind('[data-fancybox="inspire"]', {
