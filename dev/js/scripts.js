@@ -48,9 +48,10 @@ window.addEventListener('load', function(){
     //     'center': false,
     //     slidesPerPage: 1,
     // });
+
+
     // Initialise Carousel
-const myCarousel = new Carousel(document.querySelector(".carousel"), {
-    //Dots: false,
+    const myCarousel = new Carousel(document.querySelector(".carousel"), {
     'center': false,
     slidesPerPage: 1,
     on: {
@@ -72,7 +73,7 @@ const myCarousel = new Carousel(document.querySelector(".carousel"), {
           });
       },
     },
-  });
+});
   
   // Make links clickable
 //   document.getElementById("logoBar").addEventListener("click", (event) => {
