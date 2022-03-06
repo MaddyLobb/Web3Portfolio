@@ -23,11 +23,6 @@ export function photographyCarousel(){
 
 
 window.addEventListener('load', function(){
-    // const myCarousel = new Carousel(document.querySelector(".carousel"),{
-    //     'center': false,
-    //     slidesPerPage: 1,
-    // });
-
 
     // Initialise Carousel
     const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
@@ -44,19 +39,9 @@ window.addEventListener('load', function(){
           document.querySelectorAll(`#pub-carousel [data-for="${to}"], #publication-text [data-for="${to}"]`).forEach((el) => {
               el.classList.add("is-active");
           });
+        },
       },
-    },
-});
-  
-  // Make links clickable
-//   document.getElementById("logoBar").addEventListener("click", (event) => {
-//     const index = event.target.dataset.for || -1;
-  
-//     if (index > -1) {
-//       event.preventDefault();
-//       logoCarousel.slideTo(index);
-//     }
-//   });
+    });
 });
 
 Fancybox.bind('[data-fancybox="inspire"]', {
