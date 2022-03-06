@@ -30,25 +30,19 @@ window.addEventListener('load', function(){
 
 
     // Initialise Carousel
-    const myCarousel = new Carousel(document.querySelector(".carousel"), {
-    'center': false,
-    slidesPerPage: 1,
-    on: {
-      change: (carousel, to) => {
-        // Clear active elements
-        document
-          .querySelectorAll(".carousel .is-active")
-          .forEach((el) => {
-            el.classList.remove("is-active");
+    const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
+        'center': false,
+         slidesPerPage: 1,
+      on: {
+        change: (carousel, to) => {
+          // Clear active elements
+          document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
+              el.classList.remove("is-active");
           });
   
-        // Mark current elements as active
-        document
-          .querySelectorAll(
-            `.carousel [data-for="${to}"]`
-          )
-          .forEach((el) => {
-            el.classList.add("is-active");
+          // Mark current elements as active
+          document.querySelectorAll(`#pub-carousel [data-for="${to}"], #publication-text [data-for="${to}"]`).forEach((el) => {
+              el.classList.add("is-active");
           });
       },
     },
@@ -75,4 +69,4 @@ Fancybox.bind('[data-fancybox="inspire"]', {
         },
       },
     },
-  });
+});

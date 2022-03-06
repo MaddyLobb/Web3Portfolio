@@ -9,6 +9,9 @@
 
     #publication-container{
         //grid-area: publication;
+        height: 100%;
+        width: 100%;
+        //overflow: hidden;
 
         display: grid;
         grid-template-areas: "publication-image-1"
@@ -23,16 +26,25 @@
         }
 
         #publication-image-container{
-            //grid-area: publication-image-1;
+            grid-area: publication-image-1;
+
+            height: 100%;
+            width: 100%;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
             ul{
-                height: 100%;
+                //height: 100%;
                 width: 100%;
                 //overflow: hidden;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 609px;
     
                 @include md{
                     height: 750px;  
@@ -42,6 +54,10 @@
                     background-position: center;
                     background-size: cover;
                     border: 5px red solid;
+
+                    height: 100%;
+                    width: 100%;
+
                     
     
                     a:link,a:visited{
@@ -58,8 +74,8 @@
             }
 
             .carousel {
-                height: 100%;
-                width: 100%;
+                // height: 100%;
+                // width: 100%;
 
                 color: #170724;
               
@@ -71,19 +87,29 @@
 
                     width: 100%;
                     height: 100%;
-                    //width: calc(55% + 120px);
-                    margin-left: auto;
+                    width: calc(55% + 120px);
+                    //margin-left: auto;
+
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
                 }
 
-                .carousel__slide {
+                .carousel__slide{
+                    // width: var(--carousel-slide-width, 100%)!important;
+                    min-width: 100% !important;
                     width: 100%;
                     height: 100%;
-                    padding: 60px 60px 60px 160px;
+                    //padding: 60px 60px 60px 160px;
 
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
+
+                // .carousel__track{
+                //     position: static;
+                // }
 
                 .carousel__button{
                     z-index: 2;
@@ -109,6 +135,7 @@
                     top: calc(100% - 22px);
                     color: #000;
                     z-index: 300;
+                    //position: static;
 
                     .has-dots {
                         margin-bottom: 0px;
@@ -121,13 +148,13 @@
                     right: 55%;
                     bottom: 0;
                     z-index: 1;
-                    overflow: hidden;
+                    //overflow: hidden;
 
                 }
                 .carousel__image-container ul {
                     margin: 0;
                     padding: 0;
-                    overflow: hidden;
+                    //overflow: hidden;
                     height: 100%;
                     width: 100%;  
                 }
@@ -142,12 +169,6 @@
                     user-select: none;
                 }
 
-                .carousel__image-container li:before {
-                    content: "";
-                    position: absolute;
-                    z-index: 1;
-                }
-
                 .carousel__image-container li a:link a:visited {
                     position: absolute;
                     top: 0;
@@ -157,18 +178,23 @@
                     object-fit: cover;
                 }
 
-                // .carousel__image-container li.is-active {
-                //     opacity: 1;
-                // }
+                .carousel__image-container li.is-active {
+                    opacity: 1;
+                }
             }
 
             #publication-1{
                 background-image: url('../img/Inspirecover.jpg');
+                // position: absolute;
+                // width: 100%;
+                // max-height: 609px;
             }
 
             #publication-2{
                 background-image: url('../img/Inspirespread.jpg');
-
+                // position: absolute;
+                // width: 100%;
+                // max-height: 609px;
             }
 
             #publication-3{
@@ -185,6 +211,10 @@
         #publication-text-container{
             grid-area: publication-text;
 
+            height: 100%;
+            width: 100%;
+            //overflow: hidden;
+
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -197,16 +227,16 @@
             }
 
             #publication-text{
-                max-width: 450px;
+                //max-width: 450px;
                 color: var(--black);
     
                 @include md{
-                    max-width: 325px; 
+                    //max-width: 325px; 
                     padding-right: 30px;
                 }
     
                 @include lg{
-                    max-width: 400px;
+                    //max-width: 400px;
                 }
         
                 h1{
