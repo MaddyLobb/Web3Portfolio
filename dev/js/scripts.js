@@ -3,6 +3,7 @@ import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel } from "./carousel";
+import { skillsGrow } from "./scrollAnimation";
 
 var burgerButton = document.querySelector("#burger");
 // burgerButton.classList.toggle('hide');
@@ -74,3 +75,19 @@ window.addEventListener('resize', displayWindowSizeMobile);
 window.addEventListener('load', displayWindowSizeMobile);
 
 window.addEventListener('load', photographyCarousel);
+
+//window.addEventListener('load', skillsGrow);
+
+window.addEventListener('load', function(){
+
+  let triggerElements = ["#about", "#publication"];
+  console.log(triggerElements);
+
+  let animationElements = [".pop-up", "#process"];
+
+
+  for(let i = 0; i < triggerElements.length; i++){
+          skillsGrow(triggerElements[i], animationElements[i]);
+  }
+  
+});
