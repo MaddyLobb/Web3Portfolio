@@ -20,6 +20,24 @@ export function skillsGrow(){
     });
 }
 
+export function heroScroll(){
+    const tl = new gsap.timeline();
+
+    tl.from("#hero-text-container",{
+        duration:1,
+        scaleX:0,
+        scaleY:0,
+        alpha:0,
+        scrollTrigger: {
+            trigger: "#hero",
+            toggleActions: "play pause pause complete",
+            //markers: true,
+            scrub: true,
+            pin:true
+        }
+    });
+}
+
 // export function skillsGrow(){
 //     const tl = new gsap.timeline();
 

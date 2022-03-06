@@ -58,6 +58,7 @@
                 font-family: 'Sonder-Medium', serif;
                 font-size: rem-calc(60);
                 letter-spacing: 5px;
+                margin-bottom: 20px;
 
                 @include md{
                     font-size: rem-calc(80);
@@ -75,6 +76,11 @@
             li{
                 font-size: rem-calc(25);
                 line-height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                
+                
 
                 @include md{
                     font-size: rem-calc(30);
@@ -86,13 +92,24 @@
                     line-height: 70px;
                 }
             }
-              
-            ul li:before {
-                content: '\2014';
-                margin-right: 10px;
-    
-            }
         }
+    }
+
+    .svg-icon{
+        height: 50px;
+        width: 50px; 
+        margin-bottom: 10px;
+        margin-right: 20px;
+
+        // display: inline-block;
+              
+        // &.grow {
+        //     transition: all .2s ease-in-out;
+              
+        //     &:hover {
+        //         transform: scale(1.5);
+        //     }
+        // }
     }
     
 }    

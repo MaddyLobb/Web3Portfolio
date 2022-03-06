@@ -627,7 +627,7 @@ footer h1 {
   grid-template-columns: 30px auto 30px;
   grid-template-areas: ". about .";
   padding-top: 10%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 @media (min-width: 768px) {
   #about {
@@ -764,6 +764,7 @@ footer h1 {
   font-family: "Sonder-Medium", serif;
   font-size: 3.75rem;
   letter-spacing: 5px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   #skills #skills-container #skills-text h1 {
@@ -778,6 +779,9 @@ footer h1 {
 #skills #skills-container #skills-text li {
   font-size: 1.5625rem;
   line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 @media (min-width: 768px) {
   #skills #skills-container #skills-text li {
@@ -791,9 +795,11 @@ footer h1 {
     line-height: 70px;
   }
 }
-#skills #skills-container #skills-text ul li:before {
-  content: "—";
-  margin-right: 10px;
+#skills .svg-icon {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 #photography {
@@ -801,13 +807,13 @@ footer h1 {
   display: grid;
   grid-template-columns: 30px auto 30px;
   grid-template-areas: ". photography .";
-  padding-top: 10%;
+  padding-top: 20%;
   padding-bottom: 5%;
 }
 @media (min-width: 768px) {
   #photography {
     grid-template-columns: 5% auto 5%;
-    padding-top: 20%;
+    padding-top: 30%;
   }
 }
 #photography #photography-container {
@@ -890,6 +896,9 @@ footer h1 {
     height: 750px;
     width: 458px;
   }
+}
+#photography #photography-container #photography-image-container .carousel-1 .carousel__nav {
+  display: none;
 }
 #photography #photography-container #photography-image-container .carousel-1 .carousel__slide {
   display: flex;
@@ -1484,6 +1493,7 @@ footer h1 {
 }
 #contact #contact-container #contact-form-container #contact-form {
   grid-area: contact-form-2;
+  width: 100%;
 }
 @media (min-width: 768px) {
   #contact #contact-container #contact-form-container #contact-form {
@@ -1495,6 +1505,7 @@ footer h1 {
   font-size: 1.625rem;
   text-align: center;
   color: var(--white);
+  margin-top: 20px;
 }
 #contact #contact-container #contact-form-container #contact-form h2 {
   font-family: "Sonder-Medium", serif;
@@ -1512,8 +1523,12 @@ footer h1 {
   height: 100%;
   background: var(--white);
 }
+#contact #contact-container #contact-form-container #contact-form form ::placeholder {
+  color: var(--black);
+  opacity: 1;
+}
 #contact #contact-container #contact-form-container #contact-form form #first-name {
-  width: 92%;
+  width: 94%;
 }
 @media (min-width: 768px) {
   #contact #contact-container #contact-form-container #contact-form form #first-name {
@@ -1526,7 +1541,7 @@ footer h1 {
   }
 }
 #contact #contact-container #contact-form-container #contact-form form #last-name {
-  width: 92%;
+  width: 94%;
 }
 @media (min-width: 768px) {
   #contact #contact-container #contact-form-container #contact-form form #last-name {
@@ -1534,15 +1549,21 @@ footer h1 {
   }
 }
 #contact #contact-container #contact-form-container #contact-form form #email {
-  width: 92%;
+  width: 94%;
 }
 #contact #contact-container #contact-form-container #contact-form form #message {
-  width: 92%;
+  width: 94%;
   color: #000;
 }
 #contact #contact-container #contact-form-container #contact-form form #submit {
   background: var --white;
   color: var(--black);
+}
+#contact #contact-container #contact-form-container #contact-form form #submit #submit:hover {
+  color: var(--yellow);
+}
+#contact #contact-container #contact-form-container #contact-form form #submit input[type=submit].submit-btn:hover {
+  background-color: var(--green);
 }
 
 .theme-switch-wrapper {

@@ -3,7 +3,7 @@ import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel } from "./carousel";
-import { skillsGrow } from "./scrollAnimation";
+import { skillsGrow, heroScroll } from "./scrollAnimation";
 
 var burgerButton = document.querySelector("#burger");
 // burgerButton.classList.toggle('hide');
@@ -37,6 +37,7 @@ function checkScrolling(e) {
         mobileScrollPage(indexValue);
     }
 }
+
 
 //lightmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
@@ -75,6 +76,8 @@ window.addEventListener('resize', displayWindowSizeMobile);
 window.addEventListener('load', displayWindowSizeMobile);
 
 window.addEventListener('load', photographyCarousel);
+
+window.addEventListener('load', heroScroll);
 
 //window.addEventListener('load', skillsGrow);
 

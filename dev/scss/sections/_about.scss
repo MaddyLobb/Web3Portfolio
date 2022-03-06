@@ -8,7 +8,7 @@
     grid-template-areas: ". about .";
 
     padding-top: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 
     @include md{
         grid-template-columns: 10% auto 10%;  
