@@ -3,7 +3,7 @@ import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel } from "./carousel";
-import { skillsGrow, heroScroll } from "./scrollAnimation";
+import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
 
 var burgerButton = document.querySelector("#burger");
 // burgerButton.classList.toggle('hide');
@@ -46,12 +46,12 @@ function switchTheme(e){
 
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme',light);
+        localStorage.setItem('theme','light');
     }
 
     else{
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme',dark); 
+        localStorage.setItem('theme','dark'); 
     }
     
     console.log(toggleSwitch.checked +'this is the value for the checkbox');
@@ -79,18 +79,25 @@ window.addEventListener('load', photographyCarousel);
 
 window.addEventListener('load', heroScroll);
 
-//window.addEventListener('load', skillsGrow);
+
 
 window.addEventListener('load', function(){
 
-  let triggerElements = ["#about", "#publication"];
+  let triggerElements = [".pop-up", ".pop-up2", "#about-svg", "#project-svg-container", "#photography-text-container", "#branding", "#poster", "#project-svg-container", "#photography-text-container", "#branding", "#poster"];
   console.log(triggerElements);
 
-  let animationElements = [".pop-up", "#process"];
+  let animationElements = [".pop-up", ".pop-up2", "#about-text-container", "#photography-text-container", "#branding-image-container", "#poster-text-container", "#publication-image-container", "#photography-image-container", "#branding-text-container", "#poster-image-container", "#publication-text-container"];
 
+  for(let i = 0; i < 2; i++){
+    skillsGrow(triggerElements[i], animationElements[i]);
+}
 
-  for(let i = 0; i < triggerElements.length; i++){
-          skillsGrow(triggerElements[i], animationElements[i]);
-  }
+for(let i = 2; i < 7; i++){
+    slideLeft(triggerElements[i], animationElements[i]);
+}
+
+for(let i = 7; i < triggerElements.length; i++){
+    slideRight(triggerElements[i], animationElements[i]);
+}
   
 });

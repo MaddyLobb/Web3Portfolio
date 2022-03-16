@@ -1107,12 +1107,12 @@ footer h1 {
     gap: 60px;
   }
 }
-#poster #poster-container #poster-imgage-container {
+#poster #poster-container #poster-image-container {
   grid-area: poster-image;
   display: flex;
   justify-content: center;
 }
-#poster #poster-container #poster-imgage-container #photo1-poster-image {
+#poster #poster-container #poster-image-container #photo1-poster-image {
   height: 609px;
   width: 359px;
   background-image: url("../img/Bembo.jpg");
@@ -1120,7 +1120,7 @@ footer h1 {
   background-size: cover;
 }
 @media (min-width: 1024px) {
-  #poster #poster-container #poster-imgage-container #photo1-poster-image {
+  #poster #poster-container #poster-image-container #photo1-poster-image {
     height: 750px;
     width: 458px;
   }
