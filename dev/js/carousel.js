@@ -20,6 +20,25 @@ export function photographyCarousel(){
       });
 }
 
+export function brandingCarousel(){
+  const brandingCarousel = new Carousel(document.querySelector(".carousel-2"),{
+          'center': false,
+          slidesPerPage: 1,
+  });
+
+  Fancybox.bind('[data-fancybox="gallery3"]', {
+      Carousel: {
+        on: {
+          change: (that) => {
+            brandingCarousel.slideTo(brandingCarousel.findPageForSlide(that.page), {
+              friction: 0,
+            });
+          },
+        },
+      },
+    });
+}
+
 export function publicationCarousel(){
 
   // Initialise Carousel

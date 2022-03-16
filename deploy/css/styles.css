@@ -991,30 +991,75 @@ footer h1 {
 }
 #branding #branding-container {
   grid-area: branding;
+  overflow: hidden;
   display: grid;
   grid-template-areas: "branding-image-1" "branding-text";
 }
 @media (min-width: 768px) {
   #branding #branding-container {
     grid-template-areas: "branding-image-1 branding-text";
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 60% auto;
+    grid-template-rows: repeat(1, 100%);
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #branding #branding-container {
+    grid-template-areas: "branding-image-1 branding-text";
+    grid-template-columns: 70% auto;
     grid-template-rows: repeat(1, 100%);
     gap: 30px;
   }
 }
 #branding #branding-container #branding-image-container {
   grid-area: branding-image-1;
-}
-#branding #branding-container #branding-image-container #photo1-branding-image {
-  height: 609px;
   width: 100%;
-  background-image: url("../img/sjbcard.jpg");
+}
+#branding #branding-container #branding-image-container ul {
+  width: 100%;
+}
+#branding #branding-container #branding-image-container ul li {
   background-position: center;
   background-size: cover;
 }
+#branding #branding-container #branding-image-container ul li a:link, #branding #branding-container #branding-image-container ul li a:visited {
+  height: 609px;
+  display: inline-block;
+}
 @media (min-width: 768px) {
-  #branding #branding-container #branding-image-container #photo1-branding-image {
+  #branding #branding-container #branding-image-container ul li a:link, #branding #branding-container #branding-image-container ul li a:visited {
     height: 750px;
+    width: 100%;
+  }
+}
+#branding #branding-container .carousel-2 {
+  height: 609px;
+}
+@media (min-width: 768px) {
+  #branding #branding-container .carousel-2 {
+    height: 750px;
+  }
+}
+#branding #branding-container .carousel-2 .carousel__nav {
+  display: none;
+}
+#branding #branding-container .carousel-2 .carousel__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  width: 100%;
+  height: 100%;
+}
+#branding #branding-container .carousel-2 .carousel__dots {
+  color: var(--black);
+  margin-top: 5px;
+  z-index: 20;
+  position: static;
+}
+@media (min-width: 768px) {
+  #branding #branding-container .carousel-2 .carousel__dots {
+    margin-bottom: 10px;
   }
 }
 #branding #branding-container #branding-text-container {
@@ -1023,7 +1068,6 @@ footer h1 {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 30px;
-  padding-top: 5%;
 }
 @media (min-width: 768px) {
   #branding #branding-container #branding-text-container {
@@ -1075,6 +1119,18 @@ footer h1 {
   #branding #branding-container #branding-text-container #branding-text p {
     font-size: 1.25rem;
   }
+}
+
+#branding-photo-1 {
+  background-image: url("../img/sjbcard.jpg");
+}
+
+#branding-photo-2 {
+  background-image: url("../img/sjlogo.jpg");
+}
+
+#branding-photo-3 {
+  background-image: url("../img/sjletter.jpg");
 }
 
 #poster {
