@@ -2,7 +2,7 @@ import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter, menuListners } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
-import { photographyCarousel } from "./carousel";
+import { photographyCarousel, publicationCarousel} from "./carousel";
 import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
 
 var burgerButton = document.querySelector("#burger");
@@ -83,6 +83,8 @@ window.addEventListener('resize', displayWindowSizeMobile);
 window.addEventListener('load', displayWindowSizeMobile);
 
 window.addEventListener('load', photographyCarousel);
+
+window.addEventListener('load', publicationCarousel);
 
 window.addEventListener('load', heroScroll);
 

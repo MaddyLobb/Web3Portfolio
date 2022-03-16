@@ -1259,6 +1259,7 @@ footer h1 {
   top: calc(100% - 22px);
   color: #000;
   z-index: 300;
+  position: static;
 }
 #publication #publication-container #publication-image-container .carousel .carousel__dots .has-dots {
   margin-bottom: 0px;
@@ -1270,31 +1271,21 @@ footer h1 {
   right: 55%;
   bottom: 0;
   z-index: 1;
+  overflow: hidden;
 }
 #publication #publication-container #publication-image-container .carousel .carousel__image-container ul {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 #publication #publication-container #publication-image-container .carousel .carousel__image-container li {
-  position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 0.35s;
   user-select: none;
-}
-#publication #publication-container #publication-image-container .carousel .carousel__image-container li a:link a:visited {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#publication #publication-container #publication-image-container .carousel .carousel__image-container li.is-active {
-  opacity: 1;
 }
 #publication #publication-container #publication-image-container #publication-1 {
   background-image: url("../img/Inspirecover.jpg");
@@ -1324,12 +1315,11 @@ footer h1 {
   }
 }
 #publication #publication-container #publication-text-container #publication-text {
-  max-width: 450px;
+  width: 100%;
   color: var(--black);
 }
 @media (min-width: 768px) {
   #publication #publication-container #publication-text-container #publication-text {
-    max-width: 325px;
     padding-right: 30px;
   }
 }
@@ -1357,10 +1347,12 @@ footer h1 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3em;
+  max-width: 450px;
 }
 @media (min-width: 768px) {
   #publication #publication-container #publication-text-container #publication-text p {
     font-size: 1.25rem;
+    max-width: 325px;
   }
 }
 
