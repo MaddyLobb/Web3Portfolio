@@ -1,6 +1,6 @@
 import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
-import { mobileMenuEnter } from "./mobileNavAnimation";
+import { mobileMenuEnter, menuListners } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel } from "./carousel";
 import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
@@ -21,6 +21,13 @@ function openCloseMenu(){
         canISeeMenu = false;
     }
 }
+
+window.addEventListener("resize", function(){
+    if(canISeeMenu === true){
+        openCloseMenu();
+
+    }
+});
 
 burgerButton.addEventListener("click", openCloseMenu);
 let mobileNavButtons = document.querySelectorAll(".nav-btn");
@@ -78,6 +85,9 @@ window.addEventListener('load', displayWindowSizeMobile);
 window.addEventListener('load', photographyCarousel);
 
 window.addEventListener('load', heroScroll);
+
+window.addEventListener('load', menuListners);
+window.addEventListener('resize', menuListners);
 
 
 

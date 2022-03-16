@@ -15,7 +15,7 @@ export function slideLeft(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "play none none none",
-            markers: true,
+            //markers: true,
             scrub: true
         }
     });
@@ -30,7 +30,7 @@ export function slideRight(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "play pause none none",
-            markers: true,
+            //markers: true,
             scrub: true
         }
     });
