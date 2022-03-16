@@ -10,7 +10,8 @@ mobileMenuEnter.to("#mobile-nav-container", {duration:0.5, y:0, x:0})
                .to(".nav-btn",{duration:0.01, x:0, y:"+=15", alpha:1, ease: "elastic", stagger: .1}, "-=1");
 
 
-let navButtonsAnimate = document.querySelectorAll(".button");
+let navButtonsAnimate = document.querySelectorAll(".nav-btn");
+console.log(navButtonsAnimate.length);
 
 export function menuListners (){
 
@@ -37,7 +38,7 @@ export function menuListners (){
         navButtonsAnimate.forEach((link, i) =>{
             
             link.addEventListener("mouseenter", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, color: '#E3BCBA', transformOrigin: '50% 50%', ease: "elastic", background: "transparent"})
+                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, color: '#fff', transformOrigin: '50% 50%', ease: "elastic", background: "transparent"})
             
             })
                     
