@@ -1260,7 +1260,7 @@
   "projectAttributes" : {
     "creationDate" : 666836364.26966405,
     "displayValue" : "Web3Portfolio",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets_magenta",
     "iconImageWasSetByUser" : 0
   },
