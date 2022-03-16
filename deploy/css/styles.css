@@ -1177,24 +1177,11 @@ footer h1 {
 #publication #publication-container {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-areas: "publication-image-1" "publication-text";
-}
-@media (min-width: 768px) {
-  #publication #publication-container {
-    grid-template-areas: "publication-image-1 publication-text";
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 100%);
-    gap: 30px;
-  }
 }
 #publication #publication-container #publication-image-container {
   grid-area: publication-image-1;
   height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 #publication #publication-container #publication-image-container ul {
   width: 100%;
@@ -1212,16 +1199,14 @@ footer h1 {
   background-position: center;
   background-size: cover;
   border: 5px red solid;
-  height: 100%;
-  width: 100%;
+  overflow: hidden;
 }
-#publication #publication-container #publication-image-container ul li a:link, #publication #publication-container #publication-image-container ul li a:visited {
+#publication #publication-container #publication-image-container .pub-image {
   height: 609px;
   width: 100%;
-  display: inline-block;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-image-container ul li a:link, #publication #publication-container #publication-image-container ul li a:visited {
+  #publication #publication-container #publication-image-container .pub-image {
     height: 750px;
   }
 }
@@ -1272,6 +1257,9 @@ footer h1 {
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #publication #publication-container #publication-image-container .carousel .carousel__image-container ul {
   margin: 0;
@@ -1281,81 +1269,87 @@ footer h1 {
   width: 100%;
 }
 #publication #publication-container #publication-image-container .carousel .carousel__image-container li {
+  position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 0.35s;
+  overflow: hidden;
   user-select: none;
+}
+#publication #publication-container #publication-image-container .carousel .carousel__image-container li a:link a:visited {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#publication #publication-container #publication-image-container .carousel .carousel__image-container li.is-active {
+  opacity: 1;
 }
 #publication #publication-container #publication-image-container #publication-1 {
   background-image: url("../img/Inspirecover.jpg");
 }
-#publication #publication-container #publication-image-container #publication-2 {
-  background-image: url("../img/Inspirespread.jpg");
-}
-#publication #publication-container #publication-image-container #publication-3 {
-  background-image: url("../img/inspirelast.jpg");
-}
 #publication #publication-container #publication-image-container #publication-4 {
   background-image: url("../img/Inspirespread.jpg");
 }
-#publication #publication-container #publication-text-container {
+#publication #publication-container .pub-text {
   grid-area: publication-text;
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex-direction: column;
   padding-bottom: 30px;
   padding-top: 5%;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container {
+  #publication #publication-container .pub-text {
     padding-top: 0%;
   }
 }
-#publication #publication-container #publication-text-container #publication-text {
-  width: 100%;
-  color: var(--black);
-}
-@media (min-width: 768px) {
-  #publication #publication-container #publication-text-container #publication-text {
-    padding-right: 30px;
-  }
-}
-#publication #publication-container #publication-text-container #publication-text h1 {
+#publication #publication-container .pub-text h1 {
   font-weight: 800;
   font-size: 1.625rem;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container #publication-text h1 {
+  #publication #publication-container .pub-text h1 {
     font-size: 2.5rem;
   }
 }
-#publication #publication-container #publication-text-container #publication-text h3 {
+#publication #publication-container .pub-text h3 {
   font-weight: 800;
   font-size: 1.25rem;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container #publication-text h3 {
+  #publication #publication-container .pub-text h3 {
     padding-bottom: 20px;
   }
 }
-#publication #publication-container #publication-text-container #publication-text p {
+#publication #publication-container .pub-text p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3em;
   max-width: 450px;
 }
 @media (min-width: 768px) {
-  #publication #publication-container #publication-text-container #publication-text p {
+  #publication #publication-container .pub-text p {
     font-size: 1.25rem;
     max-width: 325px;
   }
 }
-
+#publication #publication-container .pub-text #publication-text {
+  width: 100%;
+  color: var(--black);
+}
+@media (min-width: 768px) {
+  #publication #publication-container .pub-text #publication-text {
+    padding-right: 30px;
+  }
+}
 #process {
   height: 70vh;
   position: relative;

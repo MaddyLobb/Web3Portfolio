@@ -24,21 +24,21 @@ export function publicationCarousel(){
 
   // Initialise Carousel
   const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
-      'center': true,
+      'center': false,
        slidesPerPage: 1,
-    on: {
-      change: (carousel, to) => {
-        // Clear active elements
-        document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
-            el.classList.remove("is-active");
-        });
+    // on: {
+    //   change: (carousel, to) => {
+    //     // Clear active elements
+    //     document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
+    //         el.classList.remove("is-active");
+    //     });
 
-        // Mark current elements as active
-        document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
-            el.classList.add("is-active");
-        });
-      },
-    },
+    //     // Mark current elements as active
+    //     document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
+    //         el.classList.add("is-active");
+    //     });
+    //   },
+    // },
   });
 
   Fancybox.bind('[data-fancybox="inspire"]', {
@@ -53,6 +53,40 @@ export function publicationCarousel(){
     },
   });
 }
+
+// export function publicationCarousel(){
+
+//   // Initialise Carousel
+//   const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
+//       'center': true,
+//        slidesPerPage: 1,
+//     on: {
+//       change: (carousel, to) => {
+//         // Clear active elements
+//         document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
+//             el.classList.remove("is-active");
+//         });
+
+//         // Mark current elements as active
+//         document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
+//             el.classList.add("is-active");
+//         });
+//       },
+//     },
+//   });
+
+//   Fancybox.bind('[data-fancybox="inspire"]', {
+//     Carousel: {
+//       on: {
+//         change: (that) => {
+//           myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+//             friction: 0,
+//           });
+//         },
+//       },
+//     },
+//   });
+// }
 
 //, #publication-text [data-for="${to}"]
 
