@@ -71,7 +71,7 @@ function switchTheme(e){
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') :null;
+const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -80,6 +80,8 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
+
+//? localStorage.getItem('theme') :null;
 
 window.addEventListener('resize', displayWindowSizeMobile);
 

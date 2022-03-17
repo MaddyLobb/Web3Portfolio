@@ -6,16 +6,15 @@ export function displayWindowSizeMobile(){
     let menuHeight = menu.offsetHeight;
 
     console.log(menuHeight);
-    //y: -menuHeight
 
     if(document.documentElement.clientWidth <= 768){
         console.log("hide");
-        gsap.set("#mobile-nav-container", {alpha:0, transformOrigin: "50% 50%"})
+        gsap.set("#mobile-nav-container", { y: -menuHeight, alpha:0, transformOrigin: "top right", scaleX:0, scaleY:0, borderRadius:"100% 100%"})
         gsap.set(".nav-btn", {alpha:0});
     }else{
         console.log("un-hide");
-        gsap.set("#mobile-nav-container",{alpha: 1});
+        gsap.set("#mobile-nav-container",{y:0, alpha: 1, scaleX:1, scaleY:1, borderRadius:"0% 0%"});
         gsap.set(".nav-btn", {alpha:1});
     }
-    //y:0
+
 }

@@ -15,7 +15,7 @@ header {
         grid-template-areas: 
         "toggle burger"
         "nav nav";
-        grid-template-columns: 50% auto;
+        grid-template-columns: 60% auto;
 
         @include md {
             grid-template-areas: "toggle nav";

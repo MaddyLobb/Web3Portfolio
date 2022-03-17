@@ -497,7 +497,7 @@ header {
 header #full-nav {
   display: grid;
   grid-template-areas: "toggle burger" "nav nav";
-  grid-template-columns: 50% auto;
+  grid-template-columns: 60% auto;
 }
 @media (min-width: 768px) {
   header #full-nav {
