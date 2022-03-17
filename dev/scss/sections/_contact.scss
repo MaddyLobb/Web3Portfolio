@@ -56,26 +56,6 @@
         #contact-form-container{
             grid-area: contact-form-1;
 
-            // display: flex;
-            // justify-content: center;
-            
-            // @include md{
-            //     padding-top: 30%;
-            // } 
-
-            // display: grid;
-            // grid-template-columns: 5% auto 5%;
-            // grid-template-areas: ". contact-form-2 .";
-
-            // @include md{
-            //     padding-top: 35%;  
-            // }
-
-            // @include lg{
-            //     padding-top: 25%; 
-            //     grid-template-columns: 10% auto 5%; 
-            // }
-
             #contact-form{
                 grid-area: contact-form-2;
                 width: 100%;
