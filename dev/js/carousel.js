@@ -59,109 +59,21 @@ export function posterCarousel(){
 }
 
 export function publicationCarousel(){
-
-  // Initialise Carousel
-  const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
-      'center': false,
-       slidesPerPage: 1,
-    // on: {
-    //   change: (carousel, to) => {
-    //     // Clear active elements
-    //     document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
-    //         el.classList.remove("is-active");
-    //     });
-
-    //     // Mark current elements as active
-    //     document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
-    //         el.classList.add("is-active");
-    //     });
-    //   },
-    // },
+    const publicationCarousel = new Carousel(document.querySelector(".carousel-4"),{
+          'center': false,
+          slidesPerPage: 1,
   });
 
-  Fancybox.bind('[data-fancybox="inspire"]', {
-    Carousel: {
-      on: {
-        change: (that) => {
-          myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-            friction: 0,
-          });
+  Fancybox.bind('[data-fancybox="gallery5"]', {
+      Carousel: {
+        on: {
+          change: (that) => {
+            publicationCarousel.slideTo(publicationCarousel.findPageForSlide(that.page), {
+              friction: 0,
+            });
+          },
         },
       },
-    },
-  });
-}
-
-// export function publicationCarousel(){
-
-//   // Initialise Carousel
-//   const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
-//       'center': true,
-//        slidesPerPage: 1,
-//     on: {
-//       change: (carousel, to) => {
-//         // Clear active elements
-//         document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
-//             el.classList.remove("is-active");
-//         });
-
-//         // Mark current elements as active
-//         document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
-//             el.classList.add("is-active");
-//         });
-//       },
-//     },
-//   });
-
-//   Fancybox.bind('[data-fancybox="inspire"]', {
-//     Carousel: {
-//       on: {
-//         change: (that) => {
-//           myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-//             friction: 0,
-//           });
-//         },
-//       },
-//     },
-//   });
-// }
-
-//, #publication-text [data-for="${to}"]
-
-
-
-// window.addEventListener('load', function(){
-
-//     // Initialise Carousel
-//     const myCarousel = new Carousel(document.querySelector("#pub-carousel"), {
-//         'center': true,
-//          slidesPerPage: 1,
-//       on: {
-//         change: (carousel, to) => {
-//           // Clear active elements
-//           document.querySelectorAll("#pub-carousel .is-active").forEach((el) => {
-//               el.classList.remove("is-active");
-//           });
+    });
   
-//           // Mark current elements as active
-//           document.querySelectorAll(`#pub-carousel [data-for="${to}"]`).forEach((el) => {
-//               el.classList.add("is-active");
-//           });
-//         },
-//       },
-//     });
-// });
-
-// //, #publication-text [data-for="${to}"]
-
-// Fancybox.bind('[data-fancybox="inspire"]', {
-//     Carousel: {
-//       on: {
-//         change: (that) => {
-//           myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-//             friction: 0,
-//           });
-//         },
-//       },
-//     },
-// });
+}

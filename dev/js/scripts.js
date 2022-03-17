@@ -99,7 +99,7 @@ window.addEventListener('load', hoverEffect);
 
 window.addEventListener('load', function(){
 
-  let triggerElements = [".pop-up", ".pop-up2", "#about-svg", "#project-svg-container", "#photography-text-container", "#branding", "#poster", "#contact-svg-container", "#project-svg-container", "#photography-text-container", "#branding", "#poster"];
+  let triggerElements = [".pop-up", ".pop-up2", "#about-svg", "#project-svg-container", "#photography-text-container", "#branding", "#poster", ".pop-up2", "#project-svg-container", "#photography-text-container", "#branding", "#poster"];
   console.log(triggerElements);
 
   let animationElements = [".pop-up", ".pop-up2", "#about-text-container", "#photography-text-container", "#branding-image-container", "#poster-text-container", "#publication-image-container", "#contact-form-container", "#photography-image-container", "#branding-text-container", "#poster-image-container", "#publication-text-container"];

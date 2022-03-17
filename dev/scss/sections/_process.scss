@@ -1,7 +1,10 @@
 #process{
     height: 70vh;
+    margin-top: 0%;
 
-    // background-color: var(--red);
+    @include md{
+        margin-top: 2.5%;
+    }
     position: relative;
     z-index: 1;
 
@@ -58,6 +61,7 @@
                 font-family: 'Sonder-Medium', serif;
                 font-size: rem-calc(60);
                 letter-spacing: 5px;
+                margin-bottom: 20px;
 
                 @include md{
                     font-size: rem-calc(80);
@@ -75,6 +79,9 @@
             li{
                 font-size: rem-calc(25);
                 line-height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: left;
 
                 @include md{
                     font-size: rem-calc(30);
@@ -86,13 +93,14 @@
                     line-height: 70px;
                 }
             }
-              
-            ul li:before {
-                content: '\2014';
-                margin-right: 10px;
-    
-            }
         }
+    }
+
+    .svg-icon{
+        height: 50px;
+        width: 50px; 
+        margin-bottom: 10px;
+        margin-right: 20px;
     }
     
 }
