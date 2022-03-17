@@ -474,16 +474,14 @@ textarea {
   text-decoration: none;
   transition: 0.25s;
   cursor: pointer;
-  color: #fff;
+  color: black;
   border: none;
 }
 @media (min-width: 768px) {
   #mobile-nav-container ul li button {
     font-size: 1.125rem;
+    color: white;
   }
-}
-#mobile-nav-container ul li button:hover {
-  color: var(--yellow);
 }
 
 /* =============
