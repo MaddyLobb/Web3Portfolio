@@ -2,7 +2,7 @@ import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
 import { mobileMenuEnter, menuListners } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
-import { photographyCarousel, publicationCarousel, brandingCarousel} from "./carousel";
+import { photographyCarousel, publicationCarousel, brandingCarousel, posterCarousel} from "./carousel";
 import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
 
 var burgerButton = document.querySelector("#burger");
@@ -84,6 +84,7 @@ window.addEventListener('load', displayWindowSizeMobile);
 
 window.addEventListener('load', photographyCarousel);
 window.addEventListener('load', brandingCarousel);
+window.addEventListener('load', posterCarousel);
 window.addEventListener('load', publicationCarousel);
 
 window.addEventListener('load', heroScroll);
@@ -95,20 +96,20 @@ window.addEventListener('resize', menuListners);
 
 window.addEventListener('load', function(){
 
-  let triggerElements = [".pop-up", ".pop-up2", "#about-svg", "#project-svg-container", "#photography-text-container", "#branding", "#poster", "#project-svg-container", "#photography-text-container", "#branding", "#poster"];
+  let triggerElements = [".pop-up", ".pop-up2", "#about-svg", "#project-svg-container", "#photography-text-container", "#branding", "#poster", "#contact-svg-container", "#project-svg-container", "#photography-text-container", "#branding", "#poster"];
   console.log(triggerElements);
 
-  let animationElements = [".pop-up", ".pop-up2", "#about-text-container", "#photography-text-container", "#branding-image-container", "#poster-text-container", "#publication-image-container", "#photography-image-container", "#branding-text-container", "#poster-image-container", "#publication-text-container"];
+  let animationElements = [".pop-up", ".pop-up2", "#about-text-container", "#photography-text-container", "#branding-image-container", "#poster-text-container", "#publication-image-container", "#contact-form-container", "#photography-image-container", "#branding-text-container", "#poster-image-container", "#publication-text-container"];
 
   for(let i = 0; i < 2; i++){
     skillsGrow(triggerElements[i], animationElements[i]);
 }
 
-for(let i = 2; i < 7; i++){
+for(let i = 2; i < 8; i++){
     slideLeft(triggerElements[i], animationElements[i]);
 }
 
-for(let i = 7; i < triggerElements.length; i++){
+for(let i = 8; i < triggerElements.length; i++){
     slideRight(triggerElements[i], animationElements[i]);
 }
   

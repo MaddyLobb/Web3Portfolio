@@ -39,6 +39,25 @@ export function brandingCarousel(){
     });
 }
 
+export function posterCarousel(){
+  const posterCarousel = new Carousel(document.querySelector(".carousel-3"),{
+          'center': false,
+          slidesPerPage: 1,
+  });
+
+  Fancybox.bind('[data-fancybox="gallery4"]', {
+      Carousel: {
+        on: {
+          change: (that) => {
+            posterCarousel.slideTo(posterCarousel.findPageForSlide(that.page), {
+              friction: 0,
+            });
+          },
+        },
+      },
+    });
+}
+
 export function publicationCarousel(){
 
   // Initialise Carousel
