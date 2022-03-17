@@ -42,7 +42,25 @@ header {
         }
 
         #mobile-nav-container {
-            background-color: var(--black);
+            //background-color: var(--black);
+            position: relative;
+            z-index: 1;
+
+            background: linear-gradient(-45deg, #FF3F47 30%, #FFD400, #938D0E);
+	        background-size: 400% 400%;
+	        animation: gradientBG 15s ease infinite;
+
+            @keyframes gradientBG {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }       
             grid-area: nav;
             position: fixed;
             width: 100vw;
@@ -50,7 +68,7 @@ header {
             z-index: 50;
 
             @include md {
-                background-color: transparent;
+                background: transparent;
                 position: static;
                 height: 50px;
                 width: 100%;
@@ -62,31 +80,3 @@ header {
         }
     }
 }
-
-// header{
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 10;
-
-//     #burger-container {
-//         justify-content: flex-end;
-//         display: flex;
-//         padding: 30px;
-//         right: 0;
-//         position: absolute;
-//         cursor: pointer;
-
-//         @include md{
-//             display: none;
-//         }
-
-//         #burger{
-//             z-index: 30;
-//             height: 40px;
-//             width: 40px;
-//         }
-
-//     }
-
-// }

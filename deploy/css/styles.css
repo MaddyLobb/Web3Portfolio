@@ -528,16 +528,31 @@ header #full-nav #burger-container #burger {
   width: 40px;
 }
 header #full-nav #mobile-nav-container {
-  background-color: var(--black);
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(-45deg, #FF3F47 30%, #FFD400, #938D0E);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   grid-area: nav;
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 50;
 }
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @media (min-width: 768px) {
   header #full-nav #mobile-nav-container {
-    background-color: transparent;
+    background: transparent;
     position: static;
     height: 50px;
     width: 100%;

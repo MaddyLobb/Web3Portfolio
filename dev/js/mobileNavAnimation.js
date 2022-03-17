@@ -1,6 +1,6 @@
 import { gsap } from "gsap"; 
 
-gsap.set(".nav-btn", {alpha:0});
+//gsap.set(".nav-btn", {alpha:0});
 
 
 export const mobileMenuEnter = new gsap.timeline({paused: true});
@@ -11,7 +11,7 @@ mobileMenuEnter.to("#mobile-nav-container", {duration:0.5, y:0, x:0})
 
 
 let navButtonsAnimate = document.querySelectorAll(".nav-btn");
-console.log(navButtonsAnimate.length);
+
 
 export function menuListners (){
 
@@ -22,11 +22,11 @@ export function menuListners (){
         navButtonsAnimate.forEach((link, i) =>{
             
             link.addEventListener("mouseenter", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1.5, color: '#F5F5F5', transformOrigin: '50% 50%', ease: "elastic", background: "#E3BCBA"})
+                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1.5, transformOrigin: '50% 50%', ease: "elastic"})
             })
                    
             link.addEventListener("mouseleave", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, stagger:.3, background: "transparent"})
+                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, stagger:.3})
                          
             })
             
@@ -38,12 +38,12 @@ export function menuListners (){
         navButtonsAnimate.forEach((link, i) =>{
             
             link.addEventListener("mouseenter", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, color: '#fff', transformOrigin: '50% 50%', ease: "elastic", background: "transparent"})
+                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1})
             
             })
                     
             link.addEventListener("mouseleave", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1, stagger:.3, color: '#fff', background: "transparent"})
+                gsap.to(navButtonsAnimate[i],{duration:.03, scale: 1})
             
             
             })

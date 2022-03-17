@@ -4,6 +4,7 @@ import { mobileMenuEnter, menuListners } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel, publicationCarousel, brandingCarousel, posterCarousel} from "./carousel";
 import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
+import { hoverEffect } from "./hover";
 
 var burgerButton = document.querySelector("#burger");
 // burgerButton.classList.toggle('hide');
@@ -91,6 +92,8 @@ window.addEventListener('load', heroScroll);
 
 window.addEventListener('load', menuListners);
 window.addEventListener('resize', menuListners);
+
+window.addEventListener('load', hoverEffect);
 
 
 
