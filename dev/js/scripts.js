@@ -1,6 +1,6 @@
 import { burgerTL } from "./burgerAnimation";
 import { displayWindowSizeMobile } from "./mobileNavResize";
-import { mobileMenuEnter, menuListners } from "./mobileNavAnimation";
+import { mobileMenuEnter, abouBtn, projectBtn, contactBtn } from "./mobileNavAnimation";
 import { mobileScrollPage } from "./mobileNavScrollTo";
 import { photographyCarousel, publicationCarousel, brandingCarousel, posterCarousel} from "./carousel";
 import { skillsGrow, heroScroll, slideLeft, slideRight } from "./scrollAnimation";
@@ -12,14 +12,16 @@ var burgerButton = document.querySelector("#burger");
 var canISeeMenu = false;
 
 function openCloseMenu(){
-    if(canISeeMenu === false){
-        burgerTL.play();
-        mobileMenuEnter.play();
-        canISeeMenu = true;
-    }else{
-        burgerTL.reverse();
-        mobileMenuEnter.reverse();
-        canISeeMenu = false;
+    if(window.innerWidth <=768){
+        if(canISeeMenu === false){
+            burgerTL.play();
+            mobileMenuEnter.play();
+            canISeeMenu = true;
+        }else{
+            burgerTL.reverse();
+            mobileMenuEnter.reverse();
+            canISeeMenu = false;
+        }
     }
 }
 
@@ -90,8 +92,12 @@ window.addEventListener('load', publicationCarousel);
 
 window.addEventListener('load', heroScroll);
 
-window.addEventListener('load', menuListners);
-window.addEventListener('resize', menuListners);
+window.addEventListener('load', abouBtn);
+window.addEventListener('resize', abouBtn);
+window.addEventListener('load', projectBtn);
+window.addEventListener('resize', projectBtn);
+window.addEventListener('load', contactBtn);
+window.addEventListener('resize', contactBtn);
 
 window.addEventListener('load', hoverEffect);
 

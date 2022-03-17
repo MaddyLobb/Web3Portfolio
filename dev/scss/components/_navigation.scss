@@ -40,17 +40,12 @@
                 text-decoration: none;
                 transition: 0.25s;
                 cursor: pointer;
-                color: black;
                 border: none;
+                color: white;
  
                 @include md {
                     font-size: rem-calc(18);
-                    color: white;
                 }
- 
-                // &:hover{
-                //     color: var(--yellow);
-                // }
             }
         }
     }
